@@ -1,0 +1,31 @@
+{
+  "_descripcion": "Registro de TODAS las propuestas de blog generadas. Fuente de verdad para saber qué slot ya tiene propuesta y evitar saltar temas del calendario editorial. Actualizar SIEMPRE después de subir un nuevo blog a Drive.",
+  "propuestas": [
+    {
+      "slot": "Julio-A",
+      "tema": "Cómo elegir un proveedor de estimación de huella de carbono: 7 preguntas antes de contratar",
+      "responsable": "Alejandra",
+      "fecha_generacion": "2026-06-18",
+      "fileId": "1OG5BSR78VeOB3bjHU5Ndv-_zyvxItJQ90k",
+      "nota": "Prueba inicial del flujo"
+    },
+    {
+      "slot": "Julio-B",
+      "tema": "Lo que la huella del Estéreo Picnic enseña a cualquier empresa que organiza eventos",
+      "responsable": "Miguel",
+      "fecha_generacion": "2026-07-01",
+      "fileId": "10mIr_Gp-JyjpHuuyLZeGho6dTMwXW0hxNyIAMwewL_c",
+      "nota": "Tema del calendario era 'Net Zero vs. Carbono Neutral' pero se generó Estéreo Picnic por error. Se reasignó: Estéreo Picnic queda como Julio-B, Net Zero pasa a Agosto-B."
+    },
+    {
+      "slot": "Agosto-A",
+      "tema": "Alcance 3 para PYMEs: por dónde empezar sin perderte en la cadena de valor",
+      "responsable": "Miguel",
+      "fecha_generacion": "2026-07-15",
+      "fileId": "1BG2sIFIi_LmZCc21sKOEtJ1vZptfwAjMnbHj8tlWBbM",
+      "nota": "Generado correctamente según calendario"
+    }
+  ],
+  "siguiente_pendiente": "Agosto-B",
+  "ultima_actualizacion": "2026-07-16"
+}
