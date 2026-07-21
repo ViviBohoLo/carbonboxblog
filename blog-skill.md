@@ -43,7 +43,7 @@ La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.
   (2) AUTOMÁTICO (carpeta de aprobados + cron): la carpeta "5_Aprobados_para_publicar" del Drive de CarbonBox (ID 1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj, hermana de "3_Borradores_automaticos", writer para todo el equipo). Cuando el responsable de turno termina de editar, MUEVE su Google Doc a esa carpeta — ese movimiento es la aprobación. Un cron CADA HORA en horario laboral (lun-vie, 8:00-18:00 America/Bogota) lista los docs de la carpeta y, para cada doc que NO tenga "traduccion_en" registrada en blog-tracker.json, ejecuta este flujo de traducción y al final crea un evento de DÍA COMPLETO en el calendario "CarbonBox (todos)" con invitación al responsable. summary EXACTO: "<responsable> · Blog listo para publicar — <título>". description EXACTA (esta plantilla, rellenando los placeholders):
 
    "Tu entrada ya tiene versión en inglés y está lista para publicar (toma ~10 min):
-   1. Abre el importador: https://carbonbox.app/admin/importar
+   1. Abre el importador: https://www.carbonbox.app/admin/importar
    2. Pega los DOS enlaces de abajo y la clave de equipo → Importar (un solo clic importa ambos idiomas).
    3. Espera ~1 minuto y abre los enlaces de Keystatic que te da la página (uno por idioma).
    4. Revisa cada borrador. ⚠️ NO toques el campo 'Slug' ni el botón 'Regenerate'.
@@ -51,7 +51,7 @@ La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.
 
    📄 Doc español (aprobado): <viewUrl ES>
    📄 Doc inglés: <viewUrl EN>
-   🔗 Importador: https://carbonbox.app/admin/importar"
+   🔗 Importador: https://www.carbonbox.app/admin/importar"
 
    Así ningún miembro del equipo necesita acceso al chat del agente.
 - Flujo: (1) lee el Doc ES final completo; (2) redacta la versión EN como HTML con los mismos estilos inline de marca (azul #0B149D, Poppins, **CarbonBox** en negrilla, tablas HTML, CTA a https://www.carbonbox.app/); (3) súbela a Drive igual que el paso 4 del flujo normal, en la misma carpeta de borradores, con title="Blog <Mes>-<A/B> — EN — <título en inglés>".
@@ -62,7 +62,7 @@ La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.
   (c) `Categoría del blog:` = la MISMA categoría en español de la lista oficial (el sitio usa las mismas 8 en ambos idiomas).
   Para lo demás: NO traduzcas la frase clave literalmente — ejecuta los pasos 0A-0C para la keyword en INGLÉS (volumen y competencia propios) y genera title tag, metadescripción, sinopsis, alt text, etiquetas (tags en inglés) y copy de LinkedIn en inglés desde cero.
 - Registra en blog-tracker.json, dentro del registro del slot correspondiente, el campo "traduccion_en" con fileId, viewUrl y fecha.
-- CIERRE: entrega JUNTOS los dos enlaces (Doc ES aprobado + Doc EN). Se importan en carbonbox.app/admin/importar en UNA SOLA operación: el formulario tiene campo para el doc ES y campo opcional para el doc EN; con ambos pegados, un clic crea los dos borradores (ES y EN). NO publiques directamente en la página web. En la vía automática el aviso es el evento de calendario descrito en DISPARADORES; en la vía manual no crees evento salvo que se pida.
+- CIERRE: entrega JUNTOS los dos enlaces (Doc ES aprobado + Doc EN). Se importan en www.carbonbox.app/admin/importar en UNA SOLA operación: el formulario tiene campo para el doc ES y campo opcional para el doc EN; con ambos pegados, un clic crea los dos borradores (ES y EN). NO publiques directamente en la página web. En la vía automática el aviso es el evento de calendario descrito en DISPARADORES; en la vía manual no crees evento salvo que se pida.
 
 COMPARATIVAS: van SIEMPRE como <table> HTML nativa con estilo de marca (detalle en PASOS e IMÁGENES), NUNCA como imagen/PNG ni node-canvas. Google convierte la tabla HTML en tabla nativa editable dentro del Doc; las imágenes generadas se corrompen al subirse.
 
