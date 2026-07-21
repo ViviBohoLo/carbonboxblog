@@ -37,12 +37,18 @@ TEMAS AD-HOC: Si Viviana pide generar un blog sobre un tema específico fuera de
 
 TRADUCCIÓN AL INGLÉS (bajo demanda, SOLO tras aprobación humana):
 La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.app, desarrollo propio — NO Wix) en español e inglés mediante el importador interno de blogs de CarbonBox, que recibe el enlace de un Google Doc por idioma y mapea su contenido a los campos de la entrada. La traducción NO se hace al generar el borrador quincenal: se hace DESPUÉS de que el equipo edita y aprueba la versión en español, para que las correcciones humanas queden en ambos idiomas.
-- DISPARADOR: Viviana (o el responsable) comparte el enlace del Google Doc en español ya aprobado y pide traducirlo (ej: "traduce este doc para publicar").
+- DISPARADORES (dos vías, mismo flujo):
+  (1) MANUAL: Viviana comparte por chat el enlace del Google Doc en español ya aprobado y pide traducirlo (ej: "traduce este doc para publicar").
+  (2) AUTOMÁTICO (carpeta de aprobados + cron): existe una carpeta en el Drive de CarbonBox llamada "5_Aprobados_para_publicar" (hermana de "3_Borradores_automaticos"; si no existe, créala en la primera corrida y anota su ID en ESTADO_Y_PENDIENTES.md). Cuando el responsable de turno termina de editar, MUEVE su Google Doc a esa carpeta — ese movimiento es la aprobación. Un cron diario (lun-vie, 8:00 America/Bogota) lista los docs de la carpeta y, para cada doc que NO tenga "traduccion_en" registrada en blog-tracker.json, ejecuta este flujo de traducción y al final crea un evento de DÍA COMPLETO en el calendario "CarbonBox (todos)": summary "<responsable> · Blog listo para importar — <título>", description con los DOS enlaces (Doc ES y Doc EN) y el recordatorio: "Importar en carbonbox.app/admin/importar: doc ES → colección Blog (ES), doc EN → colección Blog (EN); revisar en Keystatic, NO tocar el slug, desmarcar 'Borrador' para publicar." Así ningún miembro del equipo necesita acceso al chat del agente.
 - Flujo: (1) lee el Doc ES final completo; (2) redacta la versión EN como HTML con los mismos estilos inline de marca (azul #0B149D, Poppins, **CarbonBox** en negrilla, tablas HTML, CTA a https://www.carbonbox.app/); (3) súbela a Drive igual que el paso 4 del flujo normal, en la misma carpeta de borradores, con title="Blog <Mes>-<A/B> — EN — <título en inglés>".
 - La versión EN NO es traducción literal: redacción natural en inglés, misma estructura y datos. Reglas de oro en inglés: "carbon footprint ESTIMATION/estimate" (NUNCA "measurement"), "carbon CREDITS", eventos = life-cycle stages (planning, setup, execution, teardown) y alcances 1/2/3 solo para huella corporativa.
-- FICHA SEO Y PUBLICACIÓN EN INGLÉS PROPIA (obligatoria): NO traduzcas la frase clave del español. Ejecuta los pasos 0A-0C para la keyword en INGLÉS (volumen y competencia propios) y genera title tag, metadescripción, slug en inglés, checklist on-page, Open Graph y copy de LinkedIn en inglés desde cero.
+- FICHA SEO Y PUBLICACIÓN EN INGLÉS PROPIA (obligatoria), con 3 reglas técnicas del importador:
+  (a) Las ETIQUETAS de la ficha se quedan EN ESPAÑOL ("Etiqueta de título:", "Metadescripción:", "Sinopsis/extracto:", etc.) — el parser del importador las busca en español. Solo los VALORES van en inglés.
+  (b) `Slug de URL:` = EXACTAMENTE EL MISMO slug del doc en español (convención del sitio: ES y EN comparten slug y carpeta de imágenes). NUNCA inventes un slug en inglés.
+  (c) `Categoría del blog:` = la MISMA categoría en español de la lista oficial (el sitio usa las mismas 8 en ambos idiomas).
+  Para lo demás: NO traduzcas la frase clave literalmente — ejecuta los pasos 0A-0C para la keyword en INGLÉS (volumen y competencia propios) y genera title tag, metadescripción, sinopsis, alt text, etiquetas (tags en inglés) y copy de LinkedIn en inglés desde cero.
 - Registra en blog-tracker.json, dentro del registro del slot correspondiente, el campo "traduccion_en" con fileId, viewUrl y fecha.
-- CIERRE: entrega JUNTOS los dos enlaces (Doc ES aprobado + Doc EN) — son el insumo que el importador de blogs necesita para crear la entrada en ambos idiomas. NO publiques directamente en la página web y NO crees evento de calendario para la traducción (salvo que se pida).
+- CIERRE: entrega JUNTOS los dos enlaces (Doc ES aprobado + Doc EN). Se importan en carbonbox.app/admin/importar: el doc ES con colección "Blog (ES)" y el doc EN con colección "Blog (EN)". NO publiques directamente en la página web y NO crees evento de calendario para la traducción (salvo que se pida).
 
 COMPARATIVAS: van SIEMPRE como <table> HTML nativa con estilo de marca (detalle en PASOS e IMÁGENES), NUNCA como imagen/PNG ni node-canvas. Google convierte la tabla HTML en tabla nativa editable dentro del Doc; las imágenes generadas se corrompen al subirse.
 
@@ -92,11 +98,23 @@ PASOS:
 2.5. EJECUTA los pasos 0A-0D de keyword research y análisis de competencia. La frase clave validada con datos guiará TODO el blog: título, H2/H3, cuerpo, meta, slug.
 3. Redacta la propuesta como HTML con estilos inline de marca (azul #0B149D y Poppins en h1/h2/h3; cuerpo en Poppins; <b> en conceptos clave; <a href> en enlaces). Estructura: al inicio "PORTADA — elige 1 de 2" (Opción A foto de banco embebida + Opción B lista de enlaces alternativos, según la sección PORTADA); entradilla; cuerpo con descripciones desarrolladas; si aplica una comparativa, inclúyela SIEMPRE como <table> HTML con estilo de marca —nunca como imagen/PNG— (Google la convierte en tabla nativa editable dentro del Doc). Da formato: fila de encabezado con fondo azul #0B149D y texto blanco en Poppins, celdas con borde 1px #DDE2F5, y resalta la columna de CarbonBox con fondo verde-soft #E8F1EC. Ej: <table style="border-collapse:collapse;font-family:Poppins,sans-serif"><tr style="background:#0B149D;color:#ffffff"><th style="padding:6px 10px">Criterio</th>…</tr>…</table>. NUNCA generes, subas ni embebas un gráfico-imagen para la comparativa: las imágenes grandes pasadas como base64 a través del agente se truncan y el PNG queda corrupto (se ve roto en el Doc); cierre con CTA a https://www.carbonbox.app/; Referencias; y al final una sección "FICHA SEO Y PUBLICACIÓN — copiar y pegar" con TODOS estos campos listos para que el equipo (o el importador de blogs) solo los pegue en la página del blog:
 
-   **SEO básico:**
-   - Frase clave objetivo (2-5 palabras, la que se usará en título, H1, H2, cuerpo, meta, slug)
-   - Etiqueta de título (55-65 caracteres, incluye frase clave + " | CarbonBox")
-   - Metadescripción (155-165 caracteres, incluye frase clave)
-   - Slug de URL (slug corto en minúsculas con la frase clave, sin tildes, ej: "net-zero-vs-carbono-neutral")
+   FORMATO QUE LEE EL IMPORTADOR (carbonbox.app/admin/importar — respetar EXACTO):
+   - UN SOLO H1 en todo el doc = título del post. Todo lo anterior al H1 se trata como PORTADA: la primera imagen antes del H1 será la portada de la entrada (por eso la Opción A embebida va antes del título).
+   - La sección final debe ser un heading que contenga "FICHA SEO" (vale "FICHA SEO Y PUBLICACIÓN").
+   - Cada campo de la ficha es una línea "Etiqueta: valor". Las ETIQUETAS van en ESPAÑOL tal cual abajo (el importador las busca en español, ignora tildes y negrillas, y tolera sufijos como "(58 car.)").
+   - Los enlaces a carbonbox.app/post/... se convierten en enlaces internos del sitio.
+   - El "REPORTE DE KEYWORD RESEARCH" y el copy de LinkedIn pueden ir después de la ficha: NO se publican.
+
+   **SEO básico (campos que lee el importador):**
+   - `Frase clave objetivo:` (2-5 palabras, la que se usará en título, H1, H2, cuerpo, meta, slug)
+   - `Etiqueta de título:` (≤60 caracteres SIN contar el sufijo " | CarbonBox", que es opcional — el importador lo quita)
+   - `Metadescripción:` (≤155 caracteres, incluye frase clave)
+   - `Slug de URL:` (minúsculas-con-guiones con la frase clave, sin tildes, ej: "net-zero-vs-carbono-neutral")
+   - `Sinopsis/extracto:` (1-2 frases para el listado del blog)
+   - `Categoría del blog:` — UNA de las 8 oficiales del sitio: Estimación de Huella de Carbono · Estrategia y ESG · Eventos · Tecnología e IA · Normativa y COP · Bonos y créditos · Análisis de ciclo de vida · Casos de éxito
+   - `Etiquetas:` (3-5 tags separadas por coma)
+   - `Alt text de imagen de portada:` (descriptivo, con la frase clave si es natural)
+   - `Autor:` (el responsable de edición del turno; si se omite queda "CarbonBox")
    
    **Verificación SEO on-page (checklist):**
    - [ ] Frase clave en H1 (título de la entrada)
@@ -106,22 +124,19 @@ PASOS:
    - [ ] Frase clave en el slug de la URL
    - [ ] Imagen con texto alternativo descriptivo
    
-   **Redes sociales (Open Graph):**
+   **Redes sociales (Open Graph)** (informativo; el sitio los deriva del título/meta/portada):
    - og:title (puede ser = etiqueta de título)
    - og:description (puede ser = metadescripción)
    - og:image → indicar cuál foto de portada usar
    
-   **Campos del importador de blogs (página propia):**
-   - Sinopsis/extracto (≤400 caracteres)
-   - Categoría del blog
-   - Etiquetas (3-5 tags)
-   - Autor de la entrada (el responsable de edición del turno; la página del blog muestra autor en cada post)
-   - Entradas relacionadas (≤3 títulos de posts ya publicados)
+   **Extras para la revisión humana (el importador NO los lee):**
+   - Entradas relacionadas (≤3 títulos de posts ya publicados — se configuran a mano en Keystatic)
    
    **Copy de LinkedIn** (post para acompañar la publicación)
    
    **Reporte de keyword research (Neil Patel method):**
    - Frase clave elegida y por qué (volumen, dificultad, intención)
+   - Keywords secundarias: cada una ENTRE COMILLAS, ej: "alcance 3 pymes", "cadena de valor emisiones" (el importador las extrae de aquí para el SEO del post)
    - Keywords descartadas y razón
    - Top 3 competidores analizados (URL + qué cubren)
    - Content gap identificado (qué aporta CarbonBox que los otros no)

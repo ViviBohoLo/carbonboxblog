@@ -24,7 +24,8 @@ Viven en `blog-skill.md` (sección REGLAS DE ORO) — ese es el texto normativo.
 
 ## Pendientes / próximos pasos
 1. Probar el ciclo completo de publicación con una entrada real: aprobar Doc ES → pedir traducción EN al agente → pasar ambos enlaces al importador de blogs → publicar en la página propia (ES + EN) → validar campos SEO.
-1b. Con la documentación del importador (campos exactos que recibe), afinar la "FICHA SEO Y PUBLICACIÓN" del skill para que coincida campo a campo.
+1b. ✅ (21 jul) Ficha alineada campo a campo con el importador real (repo CarbonBox-web, docs/importador-setup.md + código): etiquetas en español, título ≤60, meta ≤155, 8 categorías oficiales, alt text, autor, keywords secundarias entre comillas, mismo slug ES/EN, un solo H1 con portada antes.
+1c. NUEVO — activar el disparador automático de traducción: el agente de la VPS debe (i) hacer git pull, (ii) crear la carpeta "5_Aprobados_para_publicar" en el Drive CB y anotar su ID aquí, (iii) crear el cron diario (lun-vie 8:00 Bogotá) que revisa esa carpeta y traduce lo nuevo (ver DISPARADORES en blog-skill.md). El equipo aprueba moviendo el doc a la carpeta; el aviso "listo para importar" llega por el calendario con los dos enlaces.
 2. En la VPS: hacer `git pull` para tomar esta versión del skill (traducción + correcciones) y confirmar que el agente lee el skill desde el repo.
 3. Añadir el campo "traduccion_en" al blog-tracker.json cuando se genere la primera traducción.
 4. Afinar guía/calendario con el archivo de avatars (pendiente de Viviana).
