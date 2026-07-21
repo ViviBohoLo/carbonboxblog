@@ -40,7 +40,20 @@ TRADUCCIÓN AL INGLÉS (bajo demanda, SOLO tras aprobación humana):
 La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.app, desarrollo propio — NO Wix) en español e inglés mediante el importador interno de blogs de CarbonBox, que recibe el enlace de un Google Doc por idioma y mapea su contenido a los campos de la entrada. La traducción NO se hace al generar el borrador quincenal: se hace DESPUÉS de que el equipo edita y aprueba la versión en español, para que las correcciones humanas queden en ambos idiomas.
 - DISPARADORES (dos vías, mismo flujo):
   (1) MANUAL: Viviana comparte por chat el enlace del Google Doc en español ya aprobado y pide traducirlo (ej: "traduce este doc para publicar").
-  (2) AUTOMÁTICO (carpeta de aprobados + cron): existe una carpeta en el Drive de CarbonBox llamada "5_Aprobados_para_publicar" (hermana de "3_Borradores_automaticos"; si no existe, créala en la primera corrida y anota su ID en ESTADO_Y_PENDIENTES.md). Cuando el responsable de turno termina de editar, MUEVE su Google Doc a esa carpeta — ese movimiento es la aprobación. Un cron diario (lun-vie, 8:00 America/Bogota) lista los docs de la carpeta y, para cada doc que NO tenga "traduccion_en" registrada en blog-tracker.json, ejecuta este flujo de traducción y al final crea un evento de DÍA COMPLETO en el calendario "CarbonBox (todos)": summary "<responsable> · Blog listo para importar — <título>", description con los DOS enlaces (Doc ES y Doc EN) y el recordatorio: "Importar en carbonbox.app/admin/importar: doc ES → colección Blog (ES), doc EN → colección Blog (EN); revisar en Keystatic, NO tocar el slug, desmarcar 'Borrador' para publicar." Así ningún miembro del equipo necesita acceso al chat del agente.
+  (2) AUTOMÁTICO (carpeta de aprobados + cron): la carpeta "5_Aprobados_para_publicar" del Drive de CarbonBox (ID 1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj, hermana de "3_Borradores_automaticos", writer para todo el equipo). Cuando el responsable de turno termina de editar, MUEVE su Google Doc a esa carpeta — ese movimiento es la aprobación. Un cron CADA HORA en horario laboral (lun-vie, 8:00-18:00 America/Bogota) lista los docs de la carpeta y, para cada doc que NO tenga "traduccion_en" registrada en blog-tracker.json, ejecuta este flujo de traducción y al final crea un evento de DÍA COMPLETO en el calendario "CarbonBox (todos)" con invitación al responsable. summary EXACTO: "<responsable> · Blog listo para publicar — <título>". description EXACTA (esta plantilla, rellenando los placeholders):
+
+   "Tu entrada ya tiene versión en inglés y está lista para publicar (toma ~10 min):
+   1. Abre el importador: https://carbonbox.app/admin/importar
+   2. Pega los DOS enlaces de abajo y la clave de equipo → Importar (un solo clic importa ambos idiomas).
+   3. Espera ~1 minuto y abre los enlaces de Keystatic que te da la página (uno por idioma).
+   4. Revisa cada borrador. ⚠️ NO toques el campo 'Slug' ni el botón 'Regenerate'.
+   5. Desmarca 'Borrador — no publicar' → Guardar. En ~1 minuto está en carbonbox.app.
+
+   📄 Doc español (aprobado): <viewUrl ES>
+   📄 Doc inglés: <viewUrl EN>
+   🔗 Importador: https://carbonbox.app/admin/importar"
+
+   Así ningún miembro del equipo necesita acceso al chat del agente.
 - Flujo: (1) lee el Doc ES final completo; (2) redacta la versión EN como HTML con los mismos estilos inline de marca (azul #0B149D, Poppins, **CarbonBox** en negrilla, tablas HTML, CTA a https://www.carbonbox.app/); (3) súbela a Drive igual que el paso 4 del flujo normal, en la misma carpeta de borradores, con title="Blog <Mes>-<A/B> — EN — <título en inglés>".
 - La versión EN NO es traducción literal: redacción natural en inglés, misma estructura y datos. Reglas de oro en inglés: "carbon footprint ESTIMATION/estimate" (NUNCA "measurement"), "carbon CREDITS", eventos = life-cycle stages (planning, setup, execution, teardown) y alcances 1/2/3 solo para huella corporativa.
 - FICHA SEO Y PUBLICACIÓN EN INGLÉS PROPIA (obligatoria), con 3 reglas técnicas del importador:
@@ -49,7 +62,7 @@ La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.
   (c) `Categoría del blog:` = la MISMA categoría en español de la lista oficial (el sitio usa las mismas 8 en ambos idiomas).
   Para lo demás: NO traduzcas la frase clave literalmente — ejecuta los pasos 0A-0C para la keyword en INGLÉS (volumen y competencia propios) y genera title tag, metadescripción, sinopsis, alt text, etiquetas (tags en inglés) y copy de LinkedIn en inglés desde cero.
 - Registra en blog-tracker.json, dentro del registro del slot correspondiente, el campo "traduccion_en" con fileId, viewUrl y fecha.
-- CIERRE: entrega JUNTOS los dos enlaces (Doc ES aprobado + Doc EN). Se importan en carbonbox.app/admin/importar: el doc ES con colección "Blog (ES)" y el doc EN con colección "Blog (EN)". NO publiques directamente en la página web y NO crees evento de calendario para la traducción (salvo que se pida).
+- CIERRE: entrega JUNTOS los dos enlaces (Doc ES aprobado + Doc EN). Se importan en carbonbox.app/admin/importar en UNA SOLA operación: el formulario tiene campo para el doc ES y campo opcional para el doc EN; con ambos pegados, un clic crea los dos borradores (ES y EN). NO publiques directamente en la página web. En la vía automática el aviso es el evento de calendario descrito en DISPARADORES; en la vía manual no crees evento salvo que se pida.
 
 COMPARATIVAS: van SIEMPRE como <table> HTML nativa con estilo de marca (detalle en PASOS e IMÁGENES), NUNCA como imagen/PNG ni node-canvas. Google convierte la tabla HTML en tabla nativa editable dentro del Doc; las imágenes generadas se corrompen al subirse.
 
@@ -153,7 +166,14 @@ PASOS:
       - Si responsable_rotacion == responsable_calendario → OK, continúa.
       - Si NO coinciden → DETENERSE. NO generar el blog. Reportar la discrepancia a Viviana y pedir que resuelva cuál es el correcto antes de continuar.
    d. Tras crear el evento, actualiza el archivo: proximo_index = (proximo_index + 1) % longitud(orden), ultimo_asignado = responsable, ultima_actualizacion = hoy; y guárdalo.
-6. AVISA AL EQUIPO POR CALENDARIO: con composio-cb.GOOGLECALENDAR_CREATE_EVENT, crea un evento de DÍA COMPLETO para HOY en el calendario "CarbonBox (todos)" (calendarId: info@carbonbox.app). summary EXACTO: "<responsable> · Nueva Entrada de Blog" (nombre primero). description: breve — "Nueva propuesta de entrada de blog lista para revisión. Responsable de esta edición: <responsable>. Propuesta (Google Doc): <viewUrl>. (Las opciones de portada y todos los enlaces están dentro del documento.)". Añade como invitado (attendee) el correo del responsable según el mapa de correos en rotacion_responsables.json. Usa datetimes completos ISO (no date-only). NO pongas enlaces de imágenes en el evento (van en el doc).
+6. AVISA AL EQUIPO POR CALENDARIO: con composio-cb.GOOGLECALENDAR_CREATE_EVENT, crea un evento de DÍA COMPLETO para HOY en el calendario "CarbonBox (todos)" (calendarId: info@carbonbox.app). summary EXACTO: "<responsable> · Nueva Entrada de Blog" (nombre primero). description EXACTA (esta plantilla, rellenando <responsable> y <viewUrl>):
+
+   "Nueva propuesta de entrada lista para revisión. Responsable de esta edición: <responsable>.
+   📄 Propuesta (Google Doc): <viewUrl>
+   Edita directamente en el documento (las opciones de portada están adentro).
+   ✅ Cuando termines de editar y estés conforme, MUEVE el documento a la carpeta de Drive '5_Aprobados_para_publicar' (https://drive.google.com/drive/folders/1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj) — con eso queda aprobado y en menos de una hora te llegará el aviso para publicarlo."
+
+   Añade como invitado (attendee) el correo del responsable según el mapa de correos en rotacion_responsables.json. Usa datetimes completos ISO (no date-only). NO pongas enlaces de imágenes en el evento (van en el doc).
 7. Cierra con un resumen, el responsable asignado y el viewUrl del Google Doc.
 
 RESTRICCIONES: No publiques ni envíes correos automáticamente. La propuesta (Google Doc en Drive) es base para revisión humana. El único aviso automático permitido es el evento en el calendario de CarbonBox. No generes archivos Word/.docx ni PNG.

@@ -27,8 +27,9 @@ Viven en `blog-skill.md` (sección REGLAS DE ORO) — ese es el texto normativo.
 1b. ✅ (21 jul) Ficha alineada campo a campo con el importador real (repo CarbonBox-web, docs/importador-setup.md + código): etiquetas en español, título ≤60, meta ≤155, 8 categorías oficiales, alt text, autor, keywords secundarias entre comillas, mismo slug ES/EN, un solo H1 con portada antes.
 1c. ✅ (21 jul) Disparador automático de traducción activado:
    - Carpeta "5_Aprobados_para_publicar" creada en Drive CarbonBox: ID `1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj` (https://drive.google.com/drive/folders/1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj). Compartida como writer con todo el equipo.
-   - Cron diario lun-vie 8:00 Bogotá (13:00 UTC) configurado: revisa la carpeta, traduce docs sin "traduccion_en" en blog-tracker.json, y crea evento calendario con los dos enlaces (ES + EN).
-   - Flujo: el responsable mueve el doc aprobado a esta carpeta → el cron lo detecta → traduce → crea evento "listo para importar".
+   - Cron configurado inicialmente diario lun-vie 8:00 Bogotá. ⚠️ DECISIÓN 21 jul (Viviana): cambiarlo a CADA HORA lun-vie 8:00-18:00 Bogotá — PENDIENTE ajustar el cron en OpenClaw y usar las plantillas EXACTAS de eventos que ahora están en blog-skill.md (evento del borrador con instrucción de mover a la carpeta; evento "listo para publicar" con los 5 pasos y los dos enlaces).
+   - Flujo: el responsable mueve el doc aprobado a esta carpeta → el cron lo detecta → traduce → crea evento "listo para publicar".
+   - 21 jul: el importador (carbonbox.app/admin/importar) ya acepta LOS DOS enlaces (ES + EN opcional) en una sola importación — desplegado en producción (repo CarbonBox-web).
 2. En la VPS: hacer `git pull` para tomar esta versión del skill (traducción + correcciones) y confirmar que el agente lee el skill desde el repo.
 3. Añadir el campo "traduccion_en" al blog-tracker.json cuando se genere la primera traducción.
 4. Afinar guía/calendario con el archivo de avatars (pendiente de Viviana).
