@@ -1,6 +1,6 @@
 # Proyecto: Blog CarbonBox
 
-Espacio de trabajo para producir y automatizar las entradas del blog de CarbonBox (2 entradas/mes). El agente (OpenClaw en la VPS) genera la propuesta de cada entrada como Google Doc en Drive, avisa al equipo por el calendario de CarbonBox, y el equipo la revisa, mejora y publica en Wix con la herramienta interna de importación.
+Espacio de trabajo para producir y automatizar las entradas del blog de CarbonBox (2 entradas/mes). El agente (OpenClaw en la VPS) genera la propuesta de cada entrada como Google Doc en Drive, avisa al equipo por el calendario de CarbonBox, y el equipo la revisa, mejora y publica en la página web propia de CarbonBox con el importador interno de blogs.
 
 **Este repositorio es la ÚNICA fuente de verdad del proceso.** Vive en dos lugares sincronizados por git:
 - **VPS (OpenClaw)**: `/home/joaquin/.openclaw/workspace/carbonbox/` — donde corre la automatización quincenal.
@@ -34,7 +34,7 @@ carbonboxblog/
 2. **Borrador automático** (quincenal, 1 y 15 de cada mes): el agente sigue `blog-skill.md` — keyword research, redacción con marca, Google Doc en Drive, rotación de responsable y evento en el calendario "CarbonBox (todos)".
 3. **Revisión humana**: el responsable de turno edita y aprueba el Google Doc en español.
 4. **Traducción** (bajo demanda): con el Doc ES aprobado, se le pide al agente la versión EN — con su propia ficha SEO en inglés (ver sección TRADUCCIÓN en blog-skill.md).
-5. **Publicación**: los dos enlaces (Doc ES + Doc EN) se pasan a la herramienta interna de importación, que llena los campos de la entrada del blog en Wix.
+5. **Publicación**: los dos enlaces (Doc ES + Doc EN) se pasan al importador interno de blogs, que llena los campos de la entrada en la página web propia de CarbonBox.
 
 ## Estado actual (julio 2026)
 
@@ -43,5 +43,5 @@ carbonboxblog/
 - [x] Automatización quincenal operando en la VPS (Julio-A, Julio-B y Agosto-A generados; siguiente: Agosto-B)
 - [x] Repositorio unificado como fuente única (carpeta local convertida en clon; primera iteración archivada en `_archivo/`)
 - [x] Flujo de traducción EN definido en blog-skill.md
-- [ ] Probar el ciclo completo de publicación: Doc ES aprobado → Doc EN → herramienta de importación → entrada publicada en Wix (ES + EN)
+- [ ] Probar el ciclo completo de publicación: Doc ES aprobado → Doc EN → importador de blogs → entrada publicada en la página propia (ES + EN)
 - [ ] Afinar guía/calendario con archivo de **avatars** (pendiente)
