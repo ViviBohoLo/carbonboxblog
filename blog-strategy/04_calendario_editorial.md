@@ -13,24 +13,24 @@ Los temas priorizan lo que ya rinde en el blog (IA + carbono, créditos/bonos, c
 - **(B)** ✅ *Lo que la huella del Estéreo Picnic enseña a cualquier empresa que organiza eventos.* — Caso real propio. **→ Generado 1 jul, resp. Miguel.** *(Originalmente era "Net Zero vs. Carbono Neutral", que se movió a Agosto-B.)*
 
 ## Agosto 2026
-- **(A)** ✅ *Alcance 3 para PYMEs: por dónde empezar sin perderte en la cadena de valor.* — Tema técnico de alto valor traducido a negocio. Enfoque diferenciado de los 3 posts previos de Alcance 3 (foco en PyME, no en comunicación ni ACV). Palabra clave: "alcance 3 pymes". **→ Generado 15 jul, resp. Miguel.**
-- **(B)** *Net Zero vs. Carbono Neutral: la diferencia que tu empresa necesita entender antes de comunicar cualquier compromiso.* — Tema fresco (no publicado), alto potencial en LinkedIn, aclara confusión frecuente entre clientes. Palabra clave: "net zero carbono neutral diferencia". CTA: asesoría. *(Movido desde Julio-B.)*
+- **(A)** ✅ *Alcance 3 para PYMEs: por dónde empezar sin perderte en la cadena de valor.* — Tema técnico de alto valor traducido a negocio. Enfoque diferenciado de los 3 posts previos de Alcance 3 (foco en PyME, no en comunicación ni ACV). Palabra clave: "alcance 3 pymes". **→ Generado 15 jul, resp. Laura.** *(Corregido 21 jul: era Miguel por error, le tocaba Laura según rotación.)*
+- **(B)** *Net Zero vs. Carbono Neutral: la diferencia que tu empresa necesita entender antes de comunicar cualquier compromiso.* — Tema fresco (no publicado), alto potencial en LinkedIn, aclara confusión frecuente entre clientes. Palabra clave: "net zero carbono neutral diferencia". CTA: asesoría. **→ Resp. David.** *(Movido desde Julio-B.)*
 
 ## Septiembre 2026
-- **(A)** *Lo que la huella del Festival Cordillera enseña a los organizadores de eventos en LATAM.* — Caso real propio + temporalidad (Festival Cordillera agosto 2026 en Bogotá, CarbonBox hace la estimación). Complementa el post del Estéreo Picnic con ángulo de guía para organizadores. CTA: servicios de eventos. *(Movido desde Agosto-B: tiene más sentido publicarlo en septiembre, justo después del festival.)*
-- **(B)** *Cómo preparar tu empresa para una auditoría de inventario de GEI: errores frecuentes y cómo evitarlos.* — Tema fresco (no publicado ni en parrilla anterior), alta demanda entre coordinadores ambientales y gerentes de calidad. Palabra clave: "auditoría inventario GEI". CTA: asesoría.
+- **(A)** *Lo que la huella del Festival Cordillera enseña a los organizadores de eventos en LATAM.* — Caso real propio + temporalidad (Festival Cordillera agosto 2026 en Bogotá, CarbonBox hace la estimación). Complementa el post del Estéreo Picnic con ángulo de guía para organizadores. CTA: servicios de eventos. **→ Resp. Viviana.** *(Movido desde Agosto-B: tiene más sentido publicarlo en septiembre, justo después del festival.)*
+- **(B)** *Cómo preparar tu empresa para una auditoría de inventario de GEI: errores frecuentes y cómo evitarlos.* — Tema fresco (no publicado ni en parrilla anterior), alta demanda entre coordinadores ambientales y gerentes de calidad. Palabra clave: "auditoría inventario GEI". CTA: asesoría. **→ Resp. Alejandra.**
 
 ## Octubre 2026
-- **(A)** *Análisis de Ciclo de Vida (ACV): guía práctica 2026.* — Actualización del evergreen que ya rinde (versión 2025). Palabra clave: "análisis de ciclo de vida".
-- **(B)** *Camino a la COP31: qué deberían estar mirando las empresas de LATAM.* — Ángulo de actualidad de fin de año (cierre de temporada COP).
+- **(A)** *Análisis de Ciclo de Vida (ACV): guía práctica 2026.* — Actualización del evergreen que ya rinde (versión 2025). Palabra clave: "análisis de ciclo de vida". **→ Resp. Miguel.**
+- **(B)** *Camino a la COP31: qué deberían estar mirando las empresas de LATAM.* — Ángulo de actualidad de fin de año (cierre de temporada COP). **→ Resp. Laura.**
 
 ## Noviembre 2026
-- **(A)** *Guía: cómo construir tu hoja de ruta de sostenibilidad 2027 en 5 pasos.* — Evergreen estacional (planificación de año nuevo). Palabra clave: "hoja de ruta de sostenibilidad".
-- **(B)** *Greenwashing: 3 señales de alerta que tus clientes ya están detectando.* — Ángulo de opinión, anti-greenwashing (tema de buen desempeño previo).
+- **(A)** *Guía: cómo construir tu hoja de ruta de sostenibilidad 2027 en 5 pasos.* — Evergreen estacional (planificación de año nuevo). Palabra clave: "hoja de ruta de sostenibilidad". **→ Resp. David.**
+- **(B)** *Greenwashing: 3 señales de alerta que tus clientes ya están detectando.* — Ángulo de opinión, anti-greenwashing (tema de buen desempeño previo). **→ Resp. Viviana.**
 
 ## Diciembre 2026
-- **(A)** *Huella de carbono y acceso a capital: cómo gestionarla te abre financiamiento.* — Encarna la tesis editorial. Coordinar con el equipo para no duplicar con el tema #22 del sheet (carbono y finanzas). Palabra clave: "huella de carbono financiamiento".
-- **(B)** *Balance del año: lo que cambió en regulación de carbono para empresas en LATAM.* — Recap anual, muy compartible.
+- **(A)** *Huella de carbono y acceso a capital: cómo gestionarla te abre financiamiento.* — Encarna la tesis editorial. Coordinar con el equipo para no duplicar con el tema #22 del sheet (carbono y finanzas). Palabra clave: "huella de carbono financiamiento". **→ Resp. Alejandra.**
+- **(B)** *Balance del año: lo que cambió en regulación de carbono para empresas en LATAM.* — Recap anual, muy compartible. **→ Resp. Miguel.**
 
 ---
 

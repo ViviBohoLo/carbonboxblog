@@ -129,7 +129,13 @@ PASOS:
    
    IMPORTANTE: la frase clave objetivo debe aparecer en el título (H1), en al menos un subtítulo (H2/H3), en el cuerpo, en la metadescripción y en el slug. Esto es lo que más impacta el posicionamiento en Google.
 4. SUBE A DRIVE COMO GOOGLE DOC: usa composio-cb.GOOGLEDRIVE_CREATE_FILE_FROM_TEXT con parentId=18p-NQ7PKo23Vx1lvGoVLwobxn5XPtvQ4 (carpeta 3_Borradores_automaticos en Drive CB), title="Propuesta blog <Mes>-<A/B> — <título>", textContent=el HTML completo, contentMimeType="text/html", mimeType="application/vnd.google-apps.document" (OBLIGATORIO: sin mimeType queda como text/plain y no se convierte). Guarda el viewUrl del display_url. (Subir HTML como texto evita los límites de binarios; recuerda: NADA de .docx ni PNG.)
-5. ROTACIÓN DE RESPONSABLE: lee "blog-strategy/rotacion_responsables.json". responsable = orden[proximo_index]. Tras crear el evento, actualiza el archivo: proximo_index = (proximo_index + 1) % longitud(orden), ultimo_asignado = responsable, ultima_actualizacion = hoy; y guárdalo.
+5. ROTACIÓN DE RESPONSABLE — CON VERIFICACIÓN CRUZADA (obligatorio, nunca saltar):
+   a. Lee "blog-strategy/rotacion_responsables.json": responsable_rotacion = orden[proximo_index].
+   b. Lee "blog-strategy/04_calendario_editorial.md" y busca el slot que estás generando (p. ej. "Ago-A"). Extrae el nombre que aparece después de "→ Resp." para ese slot: responsable_calendario.
+   c. COMPARA ambos valores:
+      - Si responsable_rotacion == responsable_calendario → OK, continúa.
+      - Si NO coinciden → DETENERSE. NO generar el blog. Reportar la discrepancia a Viviana y pedir que resuelva cuál es el correcto antes de continuar.
+   d. Tras crear el evento, actualiza el archivo: proximo_index = (proximo_index + 1) % longitud(orden), ultimo_asignado = responsable, ultima_actualizacion = hoy; y guárdalo.
 6. AVISA AL EQUIPO POR CALENDARIO: con composio-cb.GOOGLECALENDAR_CREATE_EVENT, crea un evento de DÍA COMPLETO para HOY en el calendario "CarbonBox (todos)" (calendarId: info@carbonbox.app). summary EXACTO: "<responsable> · Nueva Entrada de Blog" (nombre primero). description: breve — "Nueva propuesta de entrada de blog lista para revisión. Responsable de esta edición: <responsable>. Propuesta (Google Doc): <viewUrl>. (Las opciones de portada y todos los enlaces están dentro del documento.)". Añade como invitado (attendee) el correo del responsable según el mapa de correos en rotacion_responsables.json. Usa datetimes completos ISO (no date-only). NO pongas enlaces de imágenes en el evento (van en el doc).
 7. Cierra con un resumen, el responsable asignado y el viewUrl del Google Doc.
 
