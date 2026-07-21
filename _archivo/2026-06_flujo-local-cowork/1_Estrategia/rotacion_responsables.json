@@ -1,0 +1,7 @@
+{
+  "_descripcion": "Rotación de responsables de edición del blog. La rutina quincenal toma 'orden[proximo_index]' como responsable del nuevo borrador, lo pone en el título del evento de calendario ('Nueva Entrada de Blog · <Responsable>') y luego avanza proximo_index (modulo longitud). Editable a mano si cambia el turno.",
+  "orden": ["Alejandra", "Miguel", "Laura", "David", "Viviana"],
+  "proximo_index": 2,
+  "ultimo_asignado": "Miguel",
+  "ultima_actualizacion": "2026-07-01"
+}
