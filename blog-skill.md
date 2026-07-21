@@ -115,6 +115,7 @@ PASOS:
    - Sinopsis/extracto (≤400 caracteres)
    - Categoría del blog
    - Etiquetas (3-5 tags)
+   - Autor de la entrada (el responsable de edición del turno; la página del blog muestra autor en cada post)
    - Entradas relacionadas (≤3 títulos de posts ya publicados)
    
    **Copy de LinkedIn** (post para acompañar la publicación)
