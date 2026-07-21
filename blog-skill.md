@@ -30,6 +30,7 @@ CONTEXTO (Google Drive CarbonBox). Lee antes de escribir:
 - Guía de estilo: fileId 1ZIIyXVU1Kj8O2R_Qn4ey3YWoB07WbFQlrvQRYmGg8hM
 - Calendario editorial: fileId 1e9o9frbG0sUsYdHWmyEB2p9WMjm8CtpRVHhCJQlGuRs
 - Carpeta de borradores (destino): parentId 18p-NQ7PKo23Vx1lvGoVLwobxn5XPtvQ4 (en Drive CarbonBox, carpeta "3_Borradores_automaticos")
+- Carpeta de aprobados (disparador traducción): parentId 1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj (en Drive CarbonBox, carpeta "5_Aprobados_para_publicar")
 - Rotación de responsables: archivo local "/home/joaquin/.openclaw/workspace/carbonbox/blog-strategy/rotacion_responsables.json".
 - Estado/handoff: "ESTADO_Y_PENDIENTES.md" en la raíz del proyecto.
 
