@@ -45,7 +45,7 @@ La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.
    "Tu entrada ya tiene versión en inglés y está lista para publicar (toma ~10 min):
    1. Abre el importador: https://www.carbonbox.app/admin/importar
    2. Pega los DOS enlaces de abajo y la clave de equipo → Importar (un solo clic importa ambos idiomas).
-   3. Espera ~1 minuto y abre los enlaces de Keystatic que te da la página (uno por idioma).
+   3. Espera ~1 minuto y abre los enlaces de Keystatic que te da la página (uno por idioma). La primera vez te pedirá iniciar sesión con tu cuenta de GitHub (la que tiene acceso al repo de la página).
    4. Revisa cada borrador. ⚠️ NO toques el campo 'Slug' ni el botón 'Regenerate'.
    5. Desmarca 'Borrador — no publicar' → Guardar. En ~1 minuto está en carbonbox.app.
 
