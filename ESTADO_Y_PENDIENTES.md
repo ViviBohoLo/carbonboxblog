@@ -24,7 +24,7 @@ Viven en `blog-skill.md` (sección REGLAS DE ORO) — ese es el texto normativo.
 
 ## Publicación por el equipo (resuelto 3 ago 2026)
 - El equipo publica en Keystatic con la cuenta compartida de GitHub **CarbonBoxTeam** (colaboradora del repo CarbonBox-web con permiso de escritura).
-- Vercel bloquea los deploys de commits de CarbonBoxTeam (no es miembro del equipo de Vercel). Solución activa: workflow .github/workflows/publicar-keystatic.yml en CarbonBox-web, que llama un Deploy Hook de Vercel (secreto DEPLOY_HOOK_URL) solo para commits de esa cuenta. Al desmarcar "Borrador" y guardar, el sitio se publica solo en ~2 min.
+- Vercel bloquea los deploys de commits de CarbonBoxTeam (no es miembro del equipo de Vercel). Solución activa: workflow .github/workflows/publicar-keystatic.yml en CarbonBox-web — ante un commit de CarbonBoxTeam agrega un commit vacío de publicación con autor ViviBohoLo y lo empuja (el Deploy Hook NO servía: Vercel valida el autor del último commit de la rama). Página de verificación para el equipo: https://www.carbonbox.app/admin/estado (muestra última actualización del sitio y estado Publicado/Borrador de cada entrada ES/EN). Al desmarcar "Borrador" y guardar, el sitio se publica solo en ~2 min.
 - Primera entrada publicada por el equipo: Alcance 3 PYMEs (ES) por Laura, 3 ago 2026. OJO: la versión EN debe importarse con el MISMO slug del ES (la primera importación EN usó slug en inglés y hubo que borrar el duplicado).
 
 ## Pendientes / próximos pasos
