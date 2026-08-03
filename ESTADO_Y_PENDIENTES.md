@@ -22,6 +22,11 @@ Este repositorio (github.com/ViviBohoLo/carbonboxblog) es la única fuente de ve
 ## Reglas de oro
 Viven en `blog-skill.md` (sección REGLAS DE ORO) — ese es el texto normativo. Resumen: estimación (no medición), créditos (no bonos), eventos = ciclo de vida (no alcances), **CarbonBox** en negrilla, citas IEEE, CTA a carbonbox.app, diversidad en fotos, logo oficial de assets/, azul #0B149D + verde #00C269 + Poppins.
 
+## Publicación por el equipo (resuelto 3 ago 2026)
+- El equipo publica en Keystatic con la cuenta compartida de GitHub **CarbonBoxTeam** (colaboradora del repo CarbonBox-web con permiso de escritura).
+- Vercel bloquea los deploys de commits de CarbonBoxTeam (no es miembro del equipo de Vercel). Solución activa: workflow .github/workflows/publicar-keystatic.yml en CarbonBox-web, que llama un Deploy Hook de Vercel (secreto DEPLOY_HOOK_URL) solo para commits de esa cuenta. Al desmarcar "Borrador" y guardar, el sitio se publica solo en ~2 min.
+- Primera entrada publicada por el equipo: Alcance 3 PYMEs (ES) por Laura, 3 ago 2026. OJO: la versión EN debe importarse con el MISMO slug del ES (la primera importación EN usó slug en inglés y hubo que borrar el duplicado).
+
 ## Pendientes / próximos pasos
 1. Probar el ciclo completo de publicación con una entrada real: aprobar Doc ES → pedir traducción EN al agente → pasar ambos enlaces al importador de blogs → publicar en la página propia (ES + EN) → validar campos SEO.
 1b. ✅ (21 jul) Ficha alineada campo a campo con el importador real (repo CarbonBox-web, docs/importador-setup.md + código): etiquetas en español, título ≤60, meta ≤155, 8 categorías oficiales, alt text, autor, keywords secundarias entre comillas, mismo slug ES/EN, un solo H1 con portada antes.
