@@ -22,7 +22,13 @@ PORTADA — la propuesta SIEMPRE ofrece opciones de fotos de banco DENTRO del do
 - Opción A (imagen embebida): foto real de banco (Pexels/Unsplash) embebida directamente en el doc con <img src="URL_DIRECTA_JPG" style="width:100%;max-width:700px;border-radius:8px">. Elige una foto relevante al tema, con personas DIVERSAS, de alta calidad. Usa la URL directa de la imagen (?auto=compress&cs=tinysrgb&w=800 para Pexels). Google Drive descarga la imagen al convertir HTML→Doc. Debajo pon crédito y enlace a la fuente. Incluye SIEMPRE el texto alternativo (alt text) descriptivo para SEO.
 - Opción B (alternativas): lista de 3-4 ENLACES adicionales a fotos gratuitas (Pexels/Unsplash) afines al tema, con personas DIVERSAS, más 1-2 enlaces de búsqueda en Pexels para que el equipo elija si prefiere otra. Incluye texto alternativo sugerido para cada imagen.
 
-CONECTOR: usa siempre "composio-cb" (entidad CarbonBox, info@carbonbox.app). NO uses "composio" (entidad KIMSA) ni "gdrive" (solo lectura, cuenta KIMSA). Para calendario usa composio-cb.GOOGLECALENDAR_CREATE_EVENT con datetimes completos ISO (no date-only).
+ENTORNO DE EJECUCIÓN (desde agosto 2026: Claude Code, NO la VPS):
+Este flujo corre en Claude Code (equipo de Viviana) mediante tareas programadas. El agente de OpenClaw en la VPS quedó DESACTIVADO — si lees esto desde la VPS, no ejecutes nada. El repositorio github.com/ViviBohoLo/carbonboxblog sigue siendo la única fuente de verdad; la carpeta local "C:\Users\USUARIO\Claude\Projects\Blog CarbonBox" es su clon (leer archivos ahí; tras actualizar tracker o rotación: git add + commit + push).
+
+CONECTORES (Claude Code):
+- Google Drive: conector de Drive (cuenta info@kimsa.co, con acceso editor a las carpetas del blog compartidas por info@carbonbox.app). Para crear el Google Doc: create_file con parentId de la carpeta destino, title, textContent = HTML completo y contentMimeType "text/html" (Drive lo convierte a Google Doc conservando estilos). NUNCA subir .docx ni PNG.
+- Google Calendar: conector de Calendar. Calendario del equipo: "CarbonBox (todos)" (calendarId: info@carbonbox.app). Crear eventos de DÍA COMPLETO con el responsable como invitado (attendee, con su correo de rotacion_responsables.json) — la invitación de Calendar es la que le llega al responsable por correo; NO se envían correos aparte.
+- Investigación SEO: WebSearch/WebFetch (pasos 0A-0D, metodología Neil Patel — OBLIGATORIA, es la ventaja competitiva del blog).
 
 CONTEXTO (Google Drive CarbonBox). Lee antes de escribir:
 - Reglas de oro: fileId 14MAuWJupi8SNeHT4TAaapIz3bMEFv2PsvTCnIBZz7N8
@@ -31,7 +37,7 @@ CONTEXTO (Google Drive CarbonBox). Lee antes de escribir:
 - Calendario editorial: fileId 1e9o9frbG0sUsYdHWmyEB2p9WMjm8CtpRVHhCJQlGuRs
 - Carpeta de borradores (destino): parentId 18p-NQ7PKo23Vx1lvGoVLwobxn5XPtvQ4 (en Drive CarbonBox, carpeta "3_Borradores_automaticos")
 - Carpeta de aprobados (disparador traducción): parentId 1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj (en Drive CarbonBox, carpeta "5_Aprobados_para_publicar")
-- Rotación de responsables: archivo local "/home/joaquin/.openclaw/workspace/carbonbox/blog-strategy/rotacion_responsables.json".
+- Rotación de responsables: "blog-strategy/rotacion_responsables.json" (en el clon local del repo).
 - Estado/handoff: "ESTADO_Y_PENDIENTES.md" en la raíz del proyecto.
 
 TEMAS AD-HOC: Si Viviana pide generar un blog sobre un tema específico fuera del calendario, usa el mismo flujo pero: (a) NO avances la rotación del calendario editorial, (b) marca el doc como "AD-HOC" en el título, (c) el tema ad-hoc no reemplaza ni pospone la siguiente entrada planificada del calendario.
@@ -40,7 +46,7 @@ TRADUCCIÓN AL INGLÉS (bajo demanda, SOLO tras aprobación humana):
 La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.app, desarrollo propio — NO Wix) en español e inglés mediante el importador interno de blogs de CarbonBox, que recibe el enlace de un Google Doc por idioma y mapea su contenido a los campos de la entrada. La traducción NO se hace al generar el borrador quincenal: se hace DESPUÉS de que el equipo edita y aprueba la versión en español, para que las correcciones humanas queden en ambos idiomas.
 - DISPARADORES (dos vías, mismo flujo):
   (1) MANUAL: Viviana comparte por chat el enlace del Google Doc en español ya aprobado y pide traducirlo (ej: "traduce este doc para publicar").
-  (2) AUTOMÁTICO (carpeta de aprobados + cron): la carpeta "5_Aprobados_para_publicar" del Drive de CarbonBox (ID 1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj, hermana de "3_Borradores_automaticos", writer para todo el equipo). Cuando el responsable de turno termina de editar, MUEVE su Google Doc a esa carpeta — ese movimiento es la aprobación. Un cron CADA HORA en horario laboral (lun-vie, 8:00-18:00 America/Bogota) lista los docs de la carpeta y, para cada doc que NO tenga "traduccion_en" registrada en blog-tracker.json, ejecuta este flujo de traducción y al final crea un evento de DÍA COMPLETO en el calendario "CarbonBox (todos)" con invitación al responsable. summary EXACTO: "<responsable> · Blog listo para publicar — <título>". description EXACTA (esta plantilla, rellenando los placeholders):
+  (2) AUTOMÁTICO (carpeta de aprobados + cron): la carpeta "5_Aprobados_para_publicar" del Drive de CarbonBox (ID 1f9sIuqNtIrsSUUNhQgdgHwvqXJgNMzuj, hermana de "3_Borradores_automaticos", writer para todo el equipo). Cuando el responsable de turno termina de editar, MUEVE su Google Doc a esa carpeta — ese movimiento es la aprobación. Una tarea programada de Claude Code corre CADA HORA en horario laboral (lun-vie, 8:00-18:00 America/Bogota), lista los docs de la carpeta y, para cada doc que NO tenga "traduccion_en" registrada en blog-tracker.json, ejecuta este flujo de traducción y al final crea un evento de DÍA COMPLETO en el calendario "CarbonBox (todos)" con invitación al responsable. summary EXACTO: "<responsable> · Blog listo para publicar — <título>". description EXACTA (esta plantilla, rellenando los placeholders):
 
    "Tu entrada ya tiene versión en inglés y está lista para publicar (toma ~10 min):
    1. Abre el importador: https://www.carbonbox.app/admin/importar
@@ -66,7 +72,7 @@ La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.
 
 COMPARATIVAS: van SIEMPRE como <table> HTML nativa con estilo de marca (detalle en PASOS e IMÁGENES), NUNCA como imagen/PNG ni node-canvas. Google convierte la tabla HTML en tabla nativa editable dentro del Doc; las imágenes generadas se corrompen al subirse.
 
-SUBIDA A DRIVE (API directa de Google, NO Composio): usa OAuth de /home/joaquin/.gdrive-mcp/ (cuenta info@kimsa.co, con acceso writer a la carpeta de borradores). Refresh token → multipart upload con Content-Type: text/html y metadata mimeType: application/vnd.google-apps.document. Composio-CB NO convierte HTML correctamente (queda como texto plano).
+SUBIDA A DRIVE: con el conector de Drive, create_file con parentId de la carpeta de borradores, title, textContent = el HTML completo y contentMimeType "text/html" — Drive lo convierte automáticamente a Google Doc conservando estilos, tablas e imágenes embebidas. Guardar el viewUrl del resultado.
 
 KEYWORD RESEARCH Y SEO (metodología Neil Patel / Ubersuggest — ejecutar ANTES de redactar):
 
@@ -158,7 +164,7 @@ PASOS:
    - Blogs internos vinculados (con URL de carbonbox.app)
    
    IMPORTANTE: la frase clave objetivo debe aparecer en el título (H1), en al menos un subtítulo (H2/H3), en el cuerpo, en la metadescripción y en el slug. Esto es lo que más impacta el posicionamiento en Google.
-4. SUBE A DRIVE COMO GOOGLE DOC: usa composio-cb.GOOGLEDRIVE_CREATE_FILE_FROM_TEXT con parentId=18p-NQ7PKo23Vx1lvGoVLwobxn5XPtvQ4 (carpeta 3_Borradores_automaticos en Drive CB), title="Propuesta blog <Mes>-<A/B> — <título>", textContent=el HTML completo, contentMimeType="text/html", mimeType="application/vnd.google-apps.document" (OBLIGATORIO: sin mimeType queda como text/plain y no se convierte). Guarda el viewUrl del display_url. (Subir HTML como texto evita los límites de binarios; recuerda: NADA de .docx ni PNG.)
+4. SUBE A DRIVE COMO GOOGLE DOC: con el conector de Drive, create_file con parentId=18p-NQ7PKo23Vx1lvGoVLwobxn5XPtvQ4 (carpeta 3_Borradores_automaticos), title="Propuesta blog <Mes>-<A/B> — <título>", textContent=el HTML completo y contentMimeType="text/html" (Drive lo convierte a Google Doc; verificar en la respuesta que el mimeType final sea application/vnd.google-apps.document). Guarda el viewUrl. (Subir HTML como texto evita los límites de binarios; recuerda: NADA de .docx ni PNG.)
 5. ROTACIÓN DE RESPONSABLE — CON VERIFICACIÓN CRUZADA (obligatorio, nunca saltar):
    a. Lee "blog-strategy/rotacion_responsables.json": responsable_rotacion = orden[proximo_index].
    b. Lee "blog-strategy/04_calendario_editorial.md" y busca el slot que estás generando (p. ej. "Ago-A"). Extrae el nombre que aparece después de "→ Resp." para ese slot: responsable_calendario.
@@ -166,7 +172,7 @@ PASOS:
       - Si responsable_rotacion == responsable_calendario → OK, continúa.
       - Si NO coinciden → DETENERSE. NO generar el blog. Reportar la discrepancia a Viviana y pedir que resuelva cuál es el correcto antes de continuar.
    d. Tras crear el evento, actualiza el archivo: proximo_index = (proximo_index + 1) % longitud(orden), ultimo_asignado = responsable, ultima_actualizacion = hoy; y guárdalo.
-6. AVISA AL EQUIPO POR CALENDARIO: con composio-cb.GOOGLECALENDAR_CREATE_EVENT, crea un evento de DÍA COMPLETO para HOY en el calendario "CarbonBox (todos)" (calendarId: info@carbonbox.app). summary EXACTO: "<responsable> · Nueva Entrada de Blog" (nombre primero). description EXACTA (esta plantilla, rellenando <responsable> y <viewUrl>):
+6. AVISA AL EQUIPO POR CALENDARIO: con el conector de Calendar (create_event), crea un evento de DÍA COMPLETO para HOY en el calendario "CarbonBox (todos)" (calendarId: info@carbonbox.app). summary EXACTO: "<responsable> · Nueva Entrada de Blog" (nombre primero). description EXACTA (esta plantilla, rellenando <responsable> y <viewUrl>):
 
    "Nueva propuesta de entrada lista para revisión. Responsable de esta edición: <responsable>.
    📄 Propuesta (Google Doc): <viewUrl>
