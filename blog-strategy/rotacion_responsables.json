@@ -1,6 +1,12 @@
 {
   "_descripcion": "Rotación de responsables de edición del blog. La rutina quincenal toma 'orden[proximo_index]' como responsable del nuevo borrador, lo pone en el título del evento de calendario ('<Responsable> · Nueva Entrada de Blog') y lo invita por correo. Luego avanza proximo_index (modulo longitud). Editable a mano si cambia el turno.",
-  "orden": ["Alejandra", "Miguel", "Laura", "David", "Viviana"],
+  "orden": [
+    "Alejandra",
+    "Miguel",
+    "Laura",
+    "David",
+    "Viviana"
+  ],
   "correos": {
     "Alejandra": "alejandra.rojas@carbonbox.app",
     "Miguel": "miguel.romero@carbonbox.app",
@@ -8,7 +14,7 @@
     "David": "davromluc97@gmail.com",
     "Viviana": "viviana.bohorquez@carbonbox.app"
   },
-  "proximo_index": 3,
-  "ultimo_asignado": "Laura",
-  "ultima_actualizacion": "2026-07-21"
+  "proximo_index": 0,
+  "ultimo_asignado": "Viviana",
+  "ultima_actualizacion": "2026-08-24"
 }

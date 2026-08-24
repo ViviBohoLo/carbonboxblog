@@ -32,6 +32,19 @@
       }
     },
     {
+      "slot": "Agosto-B",
+      "tema": "Net Zero vs. Carbono Neutral: la diferencia que tu empresa necesita entender antes de comunicar cualquier compromiso",
+      "responsable": "David",
+      "fecha_generacion": "2026-08-12",
+      "fileId": "1y8gqCyNd6GoDpiXg-7rjwP4K00PMSsMkZx-wTowkba0",
+      "nota": "Registro retroactivo (migración a Claude Code): generado por la VPS el 12 ago sin anotarse en el tracker. Doc ES = Copia editada en 3_Borradores_automaticos.",
+      "traduccion_en": {
+        "fileId": "1PjEFHM3JScFNkDzFbWBi0InEnPicMbQmzH0SxQVR78g",
+        "viewUrl": "https://docs.google.com/document/d/1PjEFHM3JScFNkDzFbWBi0InEnPicMbQmzH0SxQVR78g/edit",
+        "fecha": "2026-08-12"
+      }
+    },
+    {
       "slot": "Septiembre-A",
       "tema": "Lo que la huella de carbono de eventos como el Festival Cordillera enseña a los organizadores en LATAM",
       "responsable": "Viviana",
@@ -45,6 +58,6 @@
       }
     }
   ],
-  "siguiente_pendiente": "Agosto-B",
+  "siguiente_pendiente": "Septiembre-B",
   "ultima_actualizacion": "2026-08-24"
 }
