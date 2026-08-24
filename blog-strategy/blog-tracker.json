@@ -23,9 +23,28 @@
       "responsable": "Miguel",
       "fecha_generacion": "2026-07-15",
       "fileId": "1BG2sIFIi_LmZCc21sKOEtJ1vZptfwAjMnbHj8tlWBbM",
-      "nota": "Generado correctamente según calendario"
+      "nota": "Generado correctamente según calendario",
+      "traduccion_en": {
+        "fileId": "1LqoQLj-ImbElDvqNaPNLwAtqVOZ003LQbizGmodwNI8",
+        "viewUrl": "https://docs.google.com/document/d/1LqoQLj-ImbElDvqNaPNLwAtqVOZ003LQbizGmodwNI8/edit",
+        "fecha": "2026-08-03",
+        "nota": "Registro retroactivo: el doc EN ya existía en la carpeta de aprobados pero no estaba anotado en el tracker."
+      }
+    },
+    {
+      "slot": "Septiembre-A",
+      "tema": "Lo que la huella de carbono de eventos como el Festival Cordillera enseña a los organizadores en LATAM",
+      "responsable": "Viviana",
+      "fecha_generacion": "2026-08-14",
+      "fileId": "1YBWVOR5MLHponIU9_-3FxcffgflPSg-N0g7h1HWp5lU",
+      "nota": "Registro retroactivo creado por la tarea de traducción: la propuesta ES ya estaba en '5_Aprobados_para_publicar' pero no figuraba en el tracker. Slug compartido ES/EN: huella-de-carbono-eventos-festival-cordillera",
+      "traduccion_en": {
+        "fileId": "1hwVYtQLdgmLsjNb__27jHYTHmTJmZCGspVqPAW8YDjs",
+        "viewUrl": "https://docs.google.com/document/d/1hwVYtQLdgmLsjNb__27jHYTHmTJmZCGspVqPAW8YDjs/edit",
+        "fecha": "2026-08-24"
+      }
     }
   ],
   "siguiente_pendiente": "Agosto-B",
-  "ultima_actualizacion": "2026-07-16"
+  "ultima_actualizacion": "2026-08-24"
 }
