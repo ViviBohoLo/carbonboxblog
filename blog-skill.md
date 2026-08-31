@@ -60,6 +60,8 @@ La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.
    🔗 Importador: https://www.carbonbox.app/admin/importar"
 
    Así ningún miembro del equipo necesita acceso al chat del agente.
+- VALIDACIÓN PREVIA (obligatoria): antes de traducir, verifica la FICHA del doc ES: debe existir, estar en formato LÍNEAS "Etiqueta: valor" (NUNCA tabla) y tener slug (4-7 palabras), sinopsis (150-250 car.), autor con nombre completo EXACTO de la lista oficial y categoría de las 8. Si la ficha del ES está incompleta o en tabla, NO traduzcas todavía: incluye en el resumen de la corrida la FICHA CORREGIDA lista para pegar y avisa que el doc ES necesita ese arreglo antes de importar.
+- RE-TRADUCCIÓN: si el doc ES fue modificado DESPUÉS de la fecha de "traduccion_en" registrada en el tracker (compara modifiedTime del doc con esa fecha), la traducción quedó desactualizada: genera una nueva versión EN desde el contenido actual, reemplaza el registro en el tracker y avisa que el doc EN anterior queda obsoleto.
 - Flujo: (1) lee el Doc ES final completo; (2) redacta la versión EN como HTML con los mismos estilos inline de marca (azul #0B149D, Poppins, **CarbonBox** en negrilla, tablas HTML, CTA a https://www.carbonbox.app/); (3) súbela a Drive igual que el paso 4 del flujo normal, en la misma carpeta de borradores, con title="Blog <Mes>-<A/B> — EN — <título en inglés>".
 - La versión EN NO es traducción literal: redacción natural en inglés, misma estructura y datos. Reglas de oro en inglés: "carbon footprint ESTIMATION/estimate" (NUNCA "measurement"), "carbon CREDITS", eventos = life-cycle stages (planning, setup, execution, teardown) y alcances 1/2/3 solo para huella corporativa.
 - FICHA SEO Y PUBLICACIÓN EN INGLÉS PROPIA (obligatoria), con 3 reglas técnicas del importador:
@@ -118,7 +120,8 @@ PASOS:
 2.5. EJECUTA los pasos 0A-0D de keyword research y análisis de competencia. La frase clave validada con datos guiará TODO el blog: título, H2/H3, cuerpo, meta, slug.
 3. Redacta la propuesta como HTML con estilos inline de marca (azul #0B149D y Poppins en h1/h2/h3; cuerpo en Poppins; <b> en conceptos clave; <a href> en enlaces). Estructura: al inicio "PORTADA — elige 1 de 2" (Opción A foto de banco embebida + Opción B lista de enlaces alternativos, según la sección PORTADA); entradilla; cuerpo con descripciones desarrolladas; si aplica una comparativa, inclúyela SIEMPRE como <table> HTML con estilo de marca —nunca como imagen/PNG— (Google la convierte en tabla nativa editable dentro del Doc). Da formato: fila de encabezado con fondo azul #0B149D y texto blanco en Poppins, celdas con borde 1px #DDE2F5, y resalta la columna de CarbonBox con fondo verde-soft #E8F1EC. Ej: <table style="border-collapse:collapse;font-family:Poppins,sans-serif"><tr style="background:#0B149D;color:#ffffff"><th style="padding:6px 10px">Criterio</th>…</tr>…</table>. NUNCA generes, subas ni embebas un gráfico-imagen para la comparativa: las imágenes grandes pasadas como base64 a través del agente se truncan y el PNG queda corrupto (se ve roto en el Doc); cierre con CTA a https://www.carbonbox.app/; Referencias; y al final una sección "FICHA SEO Y PUBLICACIÓN — copiar y pegar" con TODOS estos campos listos para que el equipo (o el importador de blogs) solo los pegue en la página del blog:
 
-   FORMATO QUE LEE EL IMPORTADOR (carbonbox.app/admin/importar — respetar EXACTO):
+   FORMATO QUE LEE EL IMPORTADOR (www.carbonbox.app/admin/importar — respetar EXACTO; lo que falte o venga mal escrito pasa directo al sitio sin que nadie lo corrija):
+   - LA FICHA VA SIEMPRE COMO LÍNEAS DE TEXTO "Etiqueta: valor", UNA POR CAMPO — NUNCA como tabla ni con otro formato. El importador NO lee tablas en la ficha: una ficha en tabla = todos los campos vacíos, URL kilométrica derivada del título, extracto cortado a mitad de frase y autor genérico "CarbonBox". (Las tablas SÍ van en el CUERPO del blog; en la ficha, jamás.)
    - UN SOLO H1 en todo el doc = título del post. Todo lo anterior al H1 se trata como PORTADA: la primera imagen antes del H1 será la portada de la entrada (por eso la Opción A embebida va antes del título).
    - La sección final debe ser un heading que contenga "FICHA SEO" (vale "FICHA SEO Y PUBLICACIÓN").
    - Cada campo de la ficha es una línea "Etiqueta: valor". Las ETIQUETAS van en ESPAÑOL tal cual abajo (el importador las busca en español, ignora tildes y negrillas, y tolera sufijos como "(58 car.)").
@@ -129,12 +132,12 @@ PASOS:
    - `Frase clave objetivo:` (2-5 palabras, la que se usará en título, H1, H2, cuerpo, meta, slug)
    - `Etiqueta de título:` (≤60 caracteres SIN contar el sufijo " | CarbonBox", que es opcional — el importador lo quita)
    - `Metadescripción:` (≤155 caracteres, incluye frase clave)
-   - `Slug de URL:` (minúsculas-con-guiones con la frase clave, sin tildes, ej: "net-zero-vs-carbono-neutral")
-   - `Sinopsis/extracto:` (1-2 frases para el listado del blog)
+   - `Slug de URL:` OBLIGATORIO. minúsculas-con-guiones, corto (4-7 palabras), con la frase clave, sin tildes, ej: "huella-de-carbono-festival-cordillera". Es la URL definitiva del artículo: si falta, el sistema la deriva del título completo y queda kilométrica y mala para SEO. Debe ser IDÉNTICO en el doc ES y el doc EN (misma URL base en /post/ y /en/post/; solo así Google enlaza las dos versiones vía hreflang — con slugs distintos compiten entre sí). El slug del doc EN va EN ESPAÑOL, igual al ES: no traducirlo.
+   - `Sinopsis/extracto:` OBLIGATORIO. 1-2 frases (150-250 caracteres) que inviten a leer — es el texto de la tarjeta del artículo en el listado del blog. Si falta, el sistema recorta los primeros 155 caracteres del texto tal cual, cortados a mitad de frase.
    - `Categoría del blog:` — UNA de las 8 oficiales del sitio: Estimación de Huella de Carbono · Estrategia y ESG · Eventos · Tecnología e IA · Normativa y COP · Bonos y créditos · Análisis de ciclo de vida · Casos de éxito
    - `Etiquetas:` (3-5 tags separadas por coma)
    - `Alt text de imagen de portada:` (descriptivo, con la frase clave si es natural)
-   - `Autor:` (el responsable de edición del turno; si se omite queda "CarbonBox")
+   - `Autor:` con el nombre completo EXACTO de esta lista oficial (copiar tal cual — el sitio asocia foto y perfil por coincidencia exacta; un nombre recortado como "Viviana Bohórquez" no coincide y el artículo sale firmado "CarbonBox"): Viviana Bohórquez Lozano · Maria Alejandra Rojas Herrera · David Romero · Laura María Bautista Santander · Miguel Ángel Romero Mora · Kimsa SAS
    
    **Verificación SEO on-page (checklist):**
    - [ ] Frase clave en H1 (título de la entrada)
