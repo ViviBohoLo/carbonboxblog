@@ -50,7 +50,7 @@
       "responsable": "Alejandra",
       "fecha_generacion": "2026-08-14",
       "fileId": "1YBWVOR5MLHponIU9_-3FxcffgflPSg-N0g7h1HWp5lU",
-      "nota": "Registro retroactivo creado por la tarea de traducción: la propuesta ES ya estaba en '5_Aprobados_para_publicar' pero no figuraba en el tracker. Slug compartido ES/EN: huella-de-carbono-eventos-festival-cordillera | 31 ago: el doc ES fue reescrito por Alejandra (nuevo título y estructura); la ficha estaba en formato TABLA y el importador no la leyó (slug largo, autor CarbonBox). Se regeneró la traducción EN (v2) desde el contenido actual y quedó pendiente pasar la ficha del ES de tabla a líneas.",
+      "nota": "Registro retroactivo creado por la tarea de traducción: la propuesta ES ya estaba en '5_Aprobados_para_publicar' pero no figuraba en el tracker. Slug compartido ES/EN: huella-de-carbono-eventos-festival-cordillera | 31 ago: el doc ES fue reescrito por Alejandra (nuevo título y estructura); la ficha estaba en formato TABLA y el importador no la leyó (slug largo, autor CarbonBox). Se regeneró la traducción EN (v2) desde el contenido actual. 31 ago 13:45 (Bogotá): la ficha del ES ya quedó en formato LÍNEAS 'Etiqueta: valor' con slug, sinopsis, categoría Eventos y autor 'Viviana Bohórquez Lozano' — ES y EN listos para importar. PENDIENTE: nunca se creó el evento de calendario 'Alejandra · Blog listo para publicar' con los DOS enlaces (existe solo el evento manual 'Publicar Ale blog' del 31 ago, que no lleva el enlace del doc EN).",
       "traduccion_en": {
         "fileId": "1wL4U4QRk47Jic8Fx867X8dV5dpCpJutnrc4lV3WupBg",
         "viewUrl": "https://docs.google.com/document/d/1wL4U4QRk47Jic8Fx867X8dV5dpCpJutnrc4lV3WupBg/edit",
