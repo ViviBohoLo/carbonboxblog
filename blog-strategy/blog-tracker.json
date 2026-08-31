@@ -46,15 +46,16 @@
     },
     {
       "slot": "Septiembre-A",
-      "tema": "Lo que la huella de carbono de eventos como el Festival Cordillera enseña a los organizadores en LATAM",
-      "responsable": "Viviana",
+      "tema": "Lo que la huella de carbono del Festival Cordillera puede enseñarnos sobre el futuro de los festivales en Latinoamérica",
+      "responsable": "Alejandra",
       "fecha_generacion": "2026-08-14",
       "fileId": "1YBWVOR5MLHponIU9_-3FxcffgflPSg-N0g7h1HWp5lU",
-      "nota": "Registro retroactivo creado por la tarea de traducción: la propuesta ES ya estaba en '5_Aprobados_para_publicar' pero no figuraba en el tracker. Slug compartido ES/EN: huella-de-carbono-eventos-festival-cordillera",
+      "nota": "Registro retroactivo creado por la tarea de traducción: la propuesta ES ya estaba en '5_Aprobados_para_publicar' pero no figuraba en el tracker. Slug compartido ES/EN: huella-de-carbono-eventos-festival-cordillera | 31 ago: el doc ES fue reescrito por Alejandra (nuevo título y estructura); la ficha estaba en formato TABLA y el importador no la leyó (slug largo, autor CarbonBox). Se regeneró la traducción EN (v2) desde el contenido actual y quedó pendiente pasar la ficha del ES de tabla a líneas.",
       "traduccion_en": {
-        "fileId": "1hwVYtQLdgmLsjNb__27jHYTHmTJmZCGspVqPAW8YDjs",
-        "viewUrl": "https://docs.google.com/document/d/1hwVYtQLdgmLsjNb__27jHYTHmTJmZCGspVqPAW8YDjs/edit",
-        "fecha": "2026-08-24"
+        "fileId": "1wL4U4QRk47Jic8Fx867X8dV5dpCpJutnrc4lV3WupBg",
+        "viewUrl": "https://docs.google.com/document/d/1wL4U4QRk47Jic8Fx867X8dV5dpCpJutnrc4lV3WupBg/edit",
+        "fecha": "2026-08-31",
+        "nota": "v2 — re-traducción del doc reescrito; reemplaza al EN del 24 ago (enviado a la papelera)"
       }
     }
   ],
