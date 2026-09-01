@@ -1,6 +1,6 @@
 {
   "_descripcion": "Rotación de responsables de edición del blog. La rutina quincenal toma 'orden[proximo_index]' como responsable del nuevo borrador y lo pone al INICIO del título del evento de calendario ('<Responsable> · Nueva Entrada de Blog'). Luego avanza proximo_index (modulo longitud). Editable a mano si cambia el turno.",
-  "_nota_correos": "Los eventos NO llevan invitados (attendees): el equipo comparte la cuenta info@carbonbox.app y las direcciones @carbonbox.app de abajo son alias de esa misma cuenta, así que Google las fusiona con el organizador y el invitado desaparece sin error (verificado 31 ago 2026). El nombre al inicio del título del evento es lo que asigna al responsable. Este mapa se conserva solo como directorio de referencia.",
+  "_nota_correos": "REGLA DE INVITADOS EN LOS EVENTOS, según el dominio del correo: (a) @carbonbox.app -> NO se añade invitado. El equipo comparte la cuenta info@carbonbox.app y esas direcciones son alias de esa misma cuenta, así que Google las fusiona con el organizador y el invitado desaparece sin error (verificado 31 ago 2026). (b) cualquier OTRO dominio -> SÍ se añade como invitado, porque es una cuenta de Google distinta y la invitación sí le llega (hoy solo David, davromluc97@gmail.com). En los dos casos el nombre al inicio del título del evento es lo que asigna al responsable.",
   "orden": [
     "Alejandra",
     "Miguel",
