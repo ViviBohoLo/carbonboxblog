@@ -57,8 +57,20 @@
         "fecha": "2026-08-31",
         "nota": "v2 — re-traducción del doc reescrito; reemplaza al EN del 24 ago (enviado a la papelera)"
       }
+    },
+    {
+      "slot": "Septiembre-B",
+      "tema": "Cómo preparar tu empresa para una auditoría de inventario de GEI: 7 errores frecuentes y cómo evitarlos",
+      "responsable": "Alejandra",
+      "fecha_generacion": "2026-09-01",
+      "fileId": "1c5u0ib0MxIV_YeFLndl0ktN335FebV7r9awT8QCaeTQ",
+      "viewUrl": "https://docs.google.com/document/d/1c5u0ib0MxIV_YeFLndl0ktN335FebV7r9awT8QCaeTQ/edit",
+      "slug": "auditoria-inventario-gei-errores-frecuentes",
+      "frase_clave": "auditoría de inventario de GEI",
+      "evento_calendario": "mns56e8ckbkqp5oo7dmap5og10",
+      "nota": "Generado según calendario editorial (Sep-B, resp. Alejandra); rotación y calendario coincidieron en la verificación cruzada. Evento de día completo 'Alejandra · Nueva Entrada de Blog' creado en 'CarbonBox (todos)' SIN invitados (correo @carbonbox.app, regla de alias). Keyword research: Ubersuggest exige login y no devolvió datos por WebFetch; volumen y dificultad se estimaron a partir del análisis de SERP y quedó anotado en la ficha del doc."
     }
   ],
-  "siguiente_pendiente": "Septiembre-B",
-  "ultima_actualizacion": "2026-08-31"
+  "siguiente_pendiente": "Octubre-A",
+  "ultima_actualizacion": "2026-09-01"
 }
