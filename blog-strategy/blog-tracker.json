@@ -68,9 +68,15 @@
       "slug": "auditoria-inventario-gei-errores-frecuentes",
       "frase_clave": "auditoría de inventario de GEI",
       "evento_calendario": "mns56e8ckbkqp5oo7dmap5og10",
-      "nota": "Generado según calendario editorial (Sep-B, resp. Alejandra); rotación y calendario coincidieron en la verificación cruzada. Evento de día completo 'Alejandra · Nueva Entrada de Blog' creado en 'CarbonBox (todos)' SIN invitados (correo @carbonbox.app, regla de alias). Keyword research: Ubersuggest exige login y no devolvió datos por WebFetch; volumen y dificultad se estimaron a partir del análisis de SERP y quedó anotado en la ficha del doc."
+      "nota": "Generado según calendario editorial (Sep-B, resp. Alejandra); rotación y calendario coincidieron en la verificación cruzada. Evento de día completo 'Alejandra · Nueva Entrada de Blog' creado en 'CarbonBox (todos)' SIN invitados (correo @carbonbox.app, regla de alias). Keyword research: Ubersuggest exige login y no devolvió datos por WebFetch; volumen y dificultad se estimaron a partir del análisis de SERP y quedó anotado en la ficha del doc. || 21 sep 2026: el doc ES apareció en '5_Aprobados_para_publicar' (aprobado por el equipo; modificado por última vez el 15 sep). La corrida horaria validó la ficha ES (formato LÍNEAS, slug, sinopsis de 228 car., categoría 'Estimación de Huella de Carbono', autor 'Maria Alejandra Rojas Herrera') y generó la traducción EN. Evento 'Alejandra · Blog listo para publicar' creado SIN invitados (eventId fpj0nt3k23khgia566n4sp1q4s) y correo de aviso enviado a info@carbonbox.app (messageId 1a0c4cf1bdf85163).",
+      "traduccion_en": {
+        "fileId": "1bmNQBpG-G7CybK7ajkZpYH-4y6MTYmGyqNK4AY5tkk4",
+        "viewUrl": "https://docs.google.com/document/d/1bmNQBpG-G7CybK7ajkZpYH-4y6MTYmGyqNK4AY5tkk4/edit",
+        "fecha": "2026-09-21",
+        "nota": "Subido en la MISMA carpeta del doc ES (raíz de '5_Aprobados_para_publicar'). Keyword research propio en inglés: frase clave 'GHG inventory audit' (no es traducción literal de 'auditoría de inventario de GEI'). Slug y categoría compartidos con el ES según convención del sitio."
+      }
     }
   ],
   "siguiente_pendiente": "Octubre-A",
-  "ultima_actualizacion": "2026-09-01"
+  "ultima_actualizacion": "2026-09-21"
 }
