@@ -59,14 +59,15 @@ La entrada del blog se publica en la página web propia de CarbonBox (carbonbox.
 
    📄 Doc español (aprobado): <viewUrl ES>
    📄 Doc inglés: <viewUrl EN>
-   🔗 Importador: https://www.carbonbox.app/admin/importar"
+   🔗 Importador: https://www.carbonbox.app/admin/importar
+   ✅ Verificación (¿ya quedó publicado?): https://www.carbonbox.app/admin/estado"
 
    Así ningún miembro del equipo necesita acceso al chat del agente.
 
    CORREO DE AVISO (obligatorio, además del evento — misma regla del paso 6b y por la misma razón: el evento de calendario pasa desapercibido y la entrada se queda sin publicar). Tras crear el evento, envía SIEMPRE un correo con el conector de Gmail (send_message):
    - Destinatario: ÚNICAMENTE info@carbonbox.app. Sin CC, sin CCO, sin destinatarios externos. NO escribas a la dirección personal del responsable (las @carbonbox.app son alias del mismo buzón).
    - Asunto EXACTO: "<responsable> · Blog listo para publicar — <título>". El nombre va PRIMERO: el buzón es compartido y el asunto es lo único que indica a quién le toca.
-   - Cuerpo (htmlBody con la marca —azul #0B149D, Poppins, **CarbonBox** en negrilla— y `body` en texto plano con el mismo contenido): usa la MISMA plantilla de 5 pasos de la description del evento, con los DOS enlaces (Doc ES aprobado + Doc EN) y el enlace del importador. Destaca visualmente la advertencia de NO tocar el campo 'Slug' ni el botón 'Regenerate'. Añade una línea con el slug compartido ES/EN para que el revisor lo reconozca si el importador se lo muestra.
+   - Cuerpo (htmlBody con la marca —azul #0B149D, Poppins, **CarbonBox** en negrilla— y `body` en texto plano con el mismo contenido): usa la MISMA plantilla de 5 pasos de la description del evento, con los DOS enlaces (Doc ES aprobado + Doc EN), el enlace del importador y el de verificación (https://www.carbonbox.app/admin/estado). Destaca visualmente la advertencia de NO tocar el campo 'Slug' ni el botón 'Regenerate'. Añade una línea con el slug compartido ES/EN para que el revisor lo reconozca si el importador se lo muestra.
    - NO adjuntes archivos. Deja constancia del messageId en el resumen de la corrida.
    - En la vía MANUAL (disparador 1) no envíes este correo salvo que se pida: ahí Viviana ya tiene los dos enlaces en el chat.
 - VALIDACIÓN PREVIA (obligatoria): antes de traducir, verifica la FICHA del doc ES: debe existir, estar en formato LÍNEAS "Etiqueta: valor" (NUNCA tabla) y tener slug (4-7 palabras), sinopsis (150-250 car.), autor con nombre completo EXACTO de la lista oficial y categoría de las 8. Si la ficha del ES está incompleta o en tabla, NO traduzcas todavía: incluye en el resumen de la corrida la FICHA CORREGIDA lista para pegar y avisa que el doc ES necesita ese arreglo antes de importar.
