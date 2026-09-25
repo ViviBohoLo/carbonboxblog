@@ -122,7 +122,8 @@ Paso 0D — CONTENT CLUSTER (contexto estratégico):
 PASOS:
 1. Lee reglas de oro, plantilla, guía y calendario editorial.
 2. VERIFICACIÓN OBLIGATORIA — identifica la siguiente entrada pendiente:
-   a. Lee el archivo local "carbonbox/blog-strategy/blog-tracker.json" que registra TODAS las propuestas ya generadas (slot, tema, fecha, fileId). Este archivo es la fuente de verdad.
+   0. PRIMERO corre `node execution/siguiente_slot.mjs` (desde la raíz del repo): hace el cruce de los puntos a-c y la verificación de rotación del paso 5a-c. Si sale con código 2 (rotación ≠ calendario) DETENTE y reporta a Viviana. Los puntos a-f siguen siendo la regla; el script es cómo se verifica.
+   a. Lee el archivo local "blog-strategy/blog-tracker.json" que registra TODAS las propuestas ya generadas (slot, tema, fecha, fileId). Este archivo es la fuente de verdad.
    b. Cruza el tracker con el calendario editorial: la siguiente entrada es el primer slot SIN registro en el tracker.
    c. CONFIRMA que el tema que vas a redactar coincide EXACTAMENTE con el tema del calendario editorial para ese slot. NO saltes slots ni sustituyas temas.
    d. Si el tema del calendario dice "medición" corrígelo a "estimación"; si dice "bonos" corrígelo a "créditos".
@@ -178,6 +179,7 @@ PASOS:
    - Blogs internos vinculados (con URL de carbonbox.app)
    
    IMPORTANTE: la frase clave objetivo debe aparecer en el título (H1), en al menos un subtítulo (H2/H3), en el cuerpo, en la metadescripción y en el slug. Esto es lo que más impacta el posicionamiento en Google.
+3.9. VALIDA ANTES DE SUBIR (obligatorio): guarda el HTML en `.tmp/<slot>.html` y corre `node execution/validar_ficha.mjs .tmp/<slot>.html`. Si reporta errores, corrígelos y repite; NUNCA subas a Drive una propuesta con errores. Revisa también las advertencias. Para la traducción EN, igual con `.tmp/<slot>-en.html`.
 4. SUBE A DRIVE COMO GOOGLE DOC: con el conector de Drive, create_file con parentId=18p-NQ7PKo23Vx1lvGoVLwobxn5XPtvQ4 (carpeta 3_Borradores_automaticos), title="Propuesta blog <Mes>-<A/B> — <título>", textContent=el HTML completo y contentMimeType="text/html" (Drive lo convierte a Google Doc; verificar en la respuesta que el mimeType final sea application/vnd.google-apps.document). Guarda el viewUrl. (Subir HTML como texto evita los límites de binarios; recuerda: NADA de .docx ni PNG.)
 5. ROTACIÓN DE RESPONSABLE — CON VERIFICACIÓN CRUZADA (obligatorio, nunca saltar):
    a. Lee "blog-strategy/rotacion_responsables.json": responsable_rotacion = orden[proximo_index].
