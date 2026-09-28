@@ -25,12 +25,12 @@ Los temas priorizan lo que ya rinde en el blog (IA + carbono, créditos/bonos, c
 - **(B)** *Camino a la COP31: qué deberían estar mirando las empresas de LATAM.* — Ángulo de actualidad de fin de año (cierre de temporada COP). **→ Resp. Laura.**
 
 ## Noviembre 2026
-- **(A)** *Guía: cómo construir tu hoja de ruta de sostenibilidad 2027 en 5 pasos.* — Evergreen estacional (planificación de año nuevo). Palabra clave: "hoja de ruta de sostenibilidad". **→ Resp. David.**
-- **(B)** *Greenwashing: 3 señales de alerta que tus clientes ya están detectando.* — Ángulo de opinión, anti-greenwashing (tema de buen desempeño previo). **→ Resp. Viviana.**
+- **(A)** *Guía: cómo construir tu hoja de ruta de sostenibilidad 2027 en 5 pasos.* — Evergreen estacional (planificación de año nuevo). Palabra clave: "hoja de ruta de sostenibilidad". **→ Resp. Viviana.**
+- **(B)** *Greenwashing: 3 señales de alerta que tus clientes ya están detectando.* — Ángulo de opinión, anti-greenwashing (tema de buen desempeño previo). **→ Resp. Alejandra.**
 
 ## Diciembre 2026
-- **(A)** *Huella de carbono y acceso a capital: cómo gestionarla te abre financiamiento.* — Encarna la tesis editorial. Coordinar con el equipo para no duplicar con el tema #22 del sheet (carbono y finanzas). Palabra clave: "huella de carbono financiamiento". **→ Resp. Alejandra.**
-- **(B)** *Balance del año: lo que cambió en regulación de carbono para empresas en LATAM.* — Recap anual, muy compartible. **→ Resp. Miguel.**
+- **(A)** *Huella de carbono y acceso a capital: cómo gestionarla te abre financiamiento.* — Encarna la tesis editorial. Coordinar con el equipo para no duplicar con el tema #22 del sheet (carbono y finanzas). Palabra clave: "huella de carbono financiamiento". **→ Resp. Miguel.**
+- **(B)** *Balance del año: lo que cambió en regulación de carbono para empresas en LATAM.* — Recap anual, muy compartible. **→ Resp. Laura.**
 
 ---
 
@@ -50,6 +50,17 @@ Los temas priorizan lo que ya rinde en el blog (IA + carbono, créditos/bonos, c
 | Sep-B | Caso real PYME | Auditoría inventario GEI | Se mueve desde Sep-A; "Caso real PYME" pasa a reserva |
 | Ago-B | IA y huella 2026 | Festival Cordillera | Caso real propio + temporalidad ago 2026; IA solapaba con post mar 2025 |
 | Sep-A | Créditos vs. bonos | Auditoría de inventario GEI | Ya hay 2 posts sobre compensación/créditos; auditoría GEI es tema fresco |
+
+## Cambios de responsables (28 sep 2026)
+
+David sale de la rotación (Viviana, 28 sep 2026). La rotación queda Alejandra → Miguel → Laura → Viviana y los turnos siguientes se corren en ese orden, para que el calendario siga coincidiendo con `rotacion_responsables.json`.
+
+| Slot | Antes | Ahora |
+|------|-------|-------|
+| Nov-A | David | Viviana |
+| Nov-B | Viviana | Alejandra |
+| Dic-A | Alejandra | Miguel |
+| Dic-B | Miguel | Laura |
 
 ## Notas de uso
 
