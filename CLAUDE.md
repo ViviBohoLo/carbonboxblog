@@ -14,6 +14,7 @@
 > Formato: `- **YYYY-MM-DD — [Tema]:** 1-3 líneas. **Por qué importa:** …`. Los más recientes van arriba.
 
 ### Registro de aprendizajes
+- **2026-09-29 — Las tareas del blog pasan al VPS (fase 3c de Pulpo):** la quincenal la corre Pulpo los días 1 y 15 a las 9:00 (Bogotá) y la traducción la dispara un vigilante que mira las subcarpetas de `5_Aprobados_para_publicar` cada 10 minutos, sin Claude. La quincenal crea de una vez la subcarpeta de la entrada (`carpeta_aprobados` en el tracker) y su enlace va en el evento y en el correo. **Por qué importa:** sin esa subcarpeta la traducción no se dispara sola; y las tareas del portátil se apagan cuando las del VPS funcionen (la horaria primero, la quincenal después del 15-oct).
 - **2026-09-25 — La verificación de slot y de la ficha ya son scripts:** `execution/siguiente_slot.mjs` y `execution/validar_ficha.mjs`. **Por qué importa:** los errores de julio a septiembre (tema equivocado en Julio-B, ficha en tabla en Septiembre-A, autor recortado) eran justo lo que el modelo verificaba "a ojo".
 - **2026-09 — OpenClaw y el VPS están desactivados para el blog:** todo corre en las tareas programadas locales de Claude (`blog-carbonbox-quincenal` y `blog-carbonbox-traducciones`). **Por qué importa:** `README.md` y `ESTADO_Y_PENDIENTES.md` todavía hablan del VPS; son historia.
 - **2026-09 — Los alias @carbonbox.app se fusionan con el organizador en Calendar:** no desaparecen por falta de permisos. **Por qué importa:** no vuelvas a diagnosticarlo como error; la regla de invitados está en `blog-skill.md`, paso 6.

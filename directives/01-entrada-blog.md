@@ -21,12 +21,15 @@
    ```
    - Con errores (código 1): corrige y vuelve a validar. **Nunca subas a Drive una propuesta con errores.**
    - Las advertencias (frase clave, negrilla, número de etiquetas) se revisan y se corrigen si aplica.
-5. Sube a Drive, avisa por Calendar y por correo, y actualiza la rotación y el tracker, según los pasos 4 a 7 del skill. Termina con commit y push.
+5. Sube a Drive (paso 4), **crea la subcarpeta de aprobación de la entrada** en `5_Aprobados_para_publicar` (paso 4b; su id y su enlace van al tracker como `carpeta_aprobados`), avisa por Calendar y por correo con el enlace a esa subcarpeta, y actualiza la rotación y el tracker, según los pasos 4 a 7 del skill. Termina con commit y push.
+
+## Como tarea programada (VPS)
+Desde la fase 3c la corre Pulpo en el VPS los días 1 y 15 a las 9:00 (Bogotá), sin nadie que responda: si algo exige una decisión (código 2 de `siguiente_slot.mjs`), no se genera la entrada y el correo de aviso a info@carbonbox.app lo explica. Solo tiene las herramientas de `Pulpo/registry/tareas.json`.
 
 ## AD-HOC
 Un pedido fuera del calendario **no avanza la rotación** y lleva "AD-HOC" en el título. Se valida igual con `validar_ficha.mjs`.
 
 ## Salidas
-- El Google Doc (su `viewUrl`).
+- El Google Doc (su `viewUrl`) y la subcarpeta de aprobación (su enlace).
 - El evento de Calendar y el correo de aviso (su `messageId`).
 - `blog-tracker.json` y `rotacion_responsables.json` actualizados, con commit.
