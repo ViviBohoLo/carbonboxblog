@@ -51,6 +51,26 @@ Eres el **agente de Contenido** de la oficina CarbonBox: el blog quincenal (ES y
 5. **Nada de .docx, PNG ni imágenes en base64.** Las comparativas van como `<table>` HTML.
 6. **CarbonBox** siempre en negrilla. El CTA va a `https://www.carbonbox.app/`, sin `#contacto`.
 
+## En el VPS (encargos de Pulpo en `/srv/agentes/Blog CarbonBox`)
+Esto aplica **solo** si trabajas en `/srv/agentes/Blog CarbonBox` (usuario `agentes`). Las tareas programadas de Pulpo
+(`/srv/pulpo/tareas/carbonboxblog`) siguen con sus conectores y con `blog-skill.md` tal cual.
+- **No tienes conectores.** Drive va por el script del CRM `blog_drive.py`, solo dentro de «Blog CarbonBox - Agente»
+  (`186jeE2HPw1s2rpLybPUWoIc43zhhvB0R`):
+  - Leer un Doc (por ejemplo, el ES aprobado para traducirlo): `crm-leer blog_drive.py --leer <docId>` (el HTML sale por pantalla).
+  - Listar una carpeta: `crm-leer blog_drive.py --listar <carpetaId>`.
+  - **Subir** una propuesta, una traducción o el PDF de una guía, después de `validar_ficha.mjs` limpio:
+    1. `cp .tmp/<archivo>.html /srv/agentes/subidas/` (el nombre, sin barras);
+    2. cierra con una `aprobacion` con la acción
+       `crm:["blog_drive.py","--subir","/srv/agentes/subidas/<archivo>.html","<carpetaId>","<título exacto>"]`, el resumen y
+       la salida de `validar_ficha.mjs`.
+    Pulpo la corre si Viviana aprueba y te devuelve `id` y `link`.
+  - **Crear una subcarpeta:** igual, con `crm:["blog_drive.py","--carpeta","<padreId>","<nombre>"]`.
+  - **Mover, borrar o compartir** en Drive: pídeselo a Pulpo como `aprobacion` (lo hace con su conector).
+- **Calendar y Gmail:** solo si el encargo los pide. Van como `aprobacion` con el contenido exacto: lo hace Pulpo.
+- **Cambios del repo** (tracker, directivas): commit en tu `main` local y `aprobacion` con `integrar:carbonboxblog` y el sha
+  completo. Nunca `git push`. Si `main` se movió (la quincenal subió el tracker): `git pull --rebase` y pide de nuevo.
+- **Guías:** `directives/04-guias.md`, «En el VPS».
+
 ## Memoria compartida
 Antes de escribir sobre un cliente, un caso o un evento, busca en el cerebro (`cerebro-carbonbox`). **No lo edites.** Si Pulpo te delega, propón en `memoria` lo publicado: slot, título, slug y URL.
 

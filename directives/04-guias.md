@@ -17,6 +17,18 @@
    - **web**, para la página o la descarga;
    - **email**, para la campaña (su directiva `04-campana-contenido.md`).
 
+## En el VPS
+- El repo de guías es `/srv/agentes/Guías para CarbonBox` (`ViviBohoLo/guias-carbonbox`). Al empezar:
+  `git -C "/srv/agentes/Guías para CarbonBox" pull --ff-only`.
+- `weasyprint`, `pdftoppm` y `pdfinfo` corren directo, sin WSL, con rutas absolutas:
+  - `weasyprint "/srv/agentes/Guías para CarbonBox/Producción guías/plantilla-guia-0X.html" "/srv/agentes/Guías para CarbonBox/CarbonBox - Guia 0X - <Título>.pdf"`;
+  - páginas: `pdfinfo "<pdf>"`;
+  - revisión: `pdftoppm -png -r 90 "<pdf>" "/srv/agentes/Guías para CarbonBox/.tmp/p"`, y **mira** cada PNG.
+- ✋ Aprobación del PDF. Después, commit en el repo de guías y `aprobacion` con `integrar:guias-carbonbox` y el sha completo.
+- Si se pide en Drive: `cp "/srv/agentes/Guías para CarbonBox/<pdf>" /srv/agentes/subidas/` y `blog_drive.py --subir` a
+  la carpeta `6_Guias` (su id se anota aquí cuando exista; si falta, pide antes `--carpeta` en
+  `186jeE2HPw1s2rpLybPUWoIc43zhhvB0R` con el nombre `6_Guias`).
+
 ## Cuidado
 - **La paleta de las guías no es la del blog.** Guías: índigo `#1620A4` y verde `#2F6B4A`. Blog: `#0B149D` y `#00C269`.
 - `weasyprint` y `pdftoppm` corren en WSL; en Windows no están instalados.
