@@ -25,6 +25,7 @@
   - páginas: `pdfinfo "<pdf>"`;
   - revisión: `pdftoppm -png -r 90 "<pdf>" "/srv/agentes/Guías para CarbonBox/.tmp/p"`, y **mira** cada PNG.
 - ✋ Aprobación del PDF. Después, commit en el repo de guías y `aprobacion` con `integrar:guias-carbonbox` y el sha completo.
+- Commit en el repo de guías: `cd "/srv/agentes/Guías para CarbonBox" && git add <archivos> && git commit -m "…"` (Pulpo da el permiso de `git add`/`git commit` por encargo; el `cd` a la carpeta de guías se permite porque es uno de los directorios agregados del agente). Si `main` se movió: `cd "/srv/agentes/Guías para CarbonBox" && git pull --rebase`.
 - Si se pide en Drive: `cp "/srv/agentes/Guías para CarbonBox/<pdf>" /srv/agentes/subidas/` y `blog_drive.py --subir` a
   la carpeta `6_Guias` (su id se anota aquí cuando exista; si falta, pide antes `--carpeta` en
   `186jeE2HPw1s2rpLybPUWoIc43zhhvB0R` con el nombre `6_Guias`).

@@ -56,7 +56,7 @@ Esto aplica **solo** si trabajas en `/srv/agentes/Blog CarbonBox` (usuario `agen
 (`/srv/pulpo/tareas/carbonboxblog`) siguen con sus conectores y con `blog-skill.md` tal cual.
 - **No tienes conectores.** Drive va por el script del CRM `blog_drive.py`, solo dentro de «Blog CarbonBox - Agente»
   (`186jeE2HPw1s2rpLybPUWoIc43zhhvB0R`):
-  - Leer un Doc (por ejemplo, el ES aprobado para traducirlo): `crm-leer blog_drive.py --leer <docId>` (el HTML sale por pantalla).
+  - Leer un Doc (por ejemplo, el ES aprobado para traducirlo): `crm-leer blog_drive.py --leer <docId>` (el HTML sale por pantalla). Un Doc largo puede pasar el límite de salida de la terminal: mejor guardarlo con `crm-leer blog_drive.py --leer <docId> > .tmp/<docId>.html` y leer el archivo.
   - Listar una carpeta: `crm-leer blog_drive.py --listar <carpetaId>`.
   - **Subir** una propuesta, una traducción o el PDF de una guía, después de `validar_ficha.mjs` limpio:
     1. `cp .tmp/<archivo>.html /srv/agentes/subidas/` (el nombre, sin barras);
