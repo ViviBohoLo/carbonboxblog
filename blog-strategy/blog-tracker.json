@@ -75,8 +75,25 @@
         "fecha": "2026-09-21",
         "nota": "Subido en la MISMA carpeta del doc ES (raíz de '5_Aprobados_para_publicar'). Keyword research propio en inglés: frase clave 'GHG inventory audit' (no es traducción literal de 'auditoría de inventario de GEI'). Slug y categoría compartidos con el ES según convención del sitio."
       }
+    },
+    {
+      "slot": "Octubre-A",
+      "tema": "Análisis de Ciclo de Vida (ACV): guía práctica 2026",
+      "responsable": "Miguel",
+      "fecha_generacion": "2026-10-01",
+      "fileId": "1fynPceQVWl-6DQYAXMSLyq6zDv8zaphZb8DxAKE0DbE",
+      "viewUrl": "https://docs.google.com/document/d/1fynPceQVWl-6DQYAXMSLyq6zDv8zaphZb8DxAKE0DbE/edit",
+      "slug": "analisis-de-ciclo-de-vida-guia-2026",
+      "frase_clave": "análisis de ciclo de vida",
+      "evento_calendario": "hq3kitffbv856pugv18bh62vm8",
+      "correo_aviso": "1a0f7ec77659739b",
+      "carpeta_aprobados": {
+        "id": "19j9q4gkNKJzYImwJPmabk0X14aYfF4uX",
+        "url": "https://drive.google.com/drive/folders/19j9q4gkNKJzYImwJPmabk0X14aYfF4uX"
+      },
+      "nota": "Generado por la tarea local del portátil (blog-carbonbox-borrador-quincenal) siguiendo blog-skill.md. siguiente_slot.mjs: rotación y calendario coinciden (Miguel). Antes de subir se verificó que no hubiera propuesta de Octubre-A en 3_Borradores_automaticos ni evento hoy (anti-duplicado con Pulpo/VPS). validar_ficha.mjs sin errores. Ubersuggest exige login: volumen/dificultad estimados por SERP. Evento sin invitados (correo @carbonbox.app)."
     }
   ],
-  "siguiente_pendiente": "Octubre-A",
-  "ultima_actualizacion": "2026-09-21"
+  "siguiente_pendiente": "Octubre-B",
+  "ultima_actualizacion": "2026-10-01"
 }
