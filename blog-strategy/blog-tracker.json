@@ -75,8 +75,28 @@
         "fecha": "2026-09-21",
         "nota": "Subido en la MISMA carpeta del doc ES (raíz de '5_Aprobados_para_publicar'). Keyword research propio en inglés: frase clave 'GHG inventory audit' (no es traducción literal de 'auditoría de inventario de GEI'). Slug y categoría compartidos con el ES según convención del sitio."
       }
+    },
+    {
+      "slot": "Octubre-A",
+      "tema": "Análisis de Ciclo de Vida (ACV): guía práctica 2026",
+      "responsable": "Miguel",
+      "fileId": "1DLBKCZCNu9E_H38I6MzOvOcBCfRO_wr8NiE_heFNR38",
+      "viewUrl": "https://docs.google.com/document/d/1DLBKCZCNu9E_H38I6MzOvOcBCfRO_wr8NiE_heFNR38/edit",
+      "slug": "analisis-de-ciclo-de-vida-guia-2026",
+      "frase_clave": "análisis de ciclo de vida",
+      "carpeta_aprobados": {
+        "id": "19j9q4gkNKJzYImwJPmabk0X14aYfF4uX",
+        "url": "https://drive.google.com/drive/folders/19j9q4gkNKJzYImwJPmabk0X14aYfF4uX"
+      },
+      "nota": "Registro retroactivo creado por la tarea de traducción (14 oct 2026): la propuesta ES ya estaba aprobada en su subcarpeta 'Octubre-A — Análisis de ciclo de vida 2026' (creada el 1 oct) pero el slot no figuraba en el tracker, y rotacion_responsables.json tampoco se había avanzado (sigue en proximo_index 1 = Miguel). Responsable según calendario editorial: Miguel. Ficha ES validada: formato LÍNEAS, slug, sinopsis de ~200 car., categoría 'Análisis de ciclo de vida', autor 'Miguel Ángel Romero Mora'. Evento 'Miguel · Blog listo para publicar' creado SIN invitados (eventId 5omr8iobs7n6l0nl2jd4jb9kss) y correo de aviso enviado a info@carbonbox.app (messageId 1a13b8e5122f1146).",
+      "traduccion_en": {
+        "fileId": "1jFpta_1vXS1SZQAeCzhZHiKo-N56EzqR-CnJwP1QeEo",
+        "viewUrl": "https://docs.google.com/document/d/1jFpta_1vXS1SZQAeCzhZHiKo-N56EzqR-CnJwP1QeEo/edit",
+        "fecha": "2026-10-14",
+        "nota": "Subido dentro de la subcarpeta de la entrada. Keyword research propio en inglés: frase clave 'life cycle assessment'. Slug y categoría compartidos con el ES. validar_ficha.mjs no se pudo correr en esta corrida (el entorno pidió aprobación para node); sus comprobaciones se hicieron a mano: 1 H1, ficha en líneas, título 51 car., meta 144, sinopsis 185, sin tablas en la ficha ni base64."
+      }
     }
   ],
-  "siguiente_pendiente": "Octubre-A",
-  "ultima_actualizacion": "2026-09-21"
+  "siguiente_pendiente": "Octubre-B",
+  "ultima_actualizacion": "2026-10-14"
 }
