@@ -22,10 +22,10 @@ Los temas priorizan lo que ya rinde en el blog (IA + carbono, créditos/bonos, c
 
 ## Octubre 2026
 - **(A)** *Análisis de Ciclo de Vida (ACV): guía práctica 2026.* — Actualización del evergreen que ya rinde (versión 2025). Palabra clave: "análisis de ciclo de vida". **→ Resp. Miguel.**
-- **(B)** *Camino a la COP31: qué deberían estar mirando las empresas de LATAM.* — Ángulo de actualidad de fin de año (cierre de temporada COP). **→ Resp. Laura.**
+- **(B)** *Metano en combustión: por qué usar un GWP de 27 y cuándo corresponde 29,8.* — Aclaración técnica sobre el GWP100 del metano (AR6) en la guía del GHG Protocol de agosto de 2024: combustión frente a fugas, doble conteo de CO2 y diferencia con el factor de emisión. Palabra clave: "metano en combustión". **→ Resp. Laura.** *(Reemplaza a "Camino a la COP31", que pasa a Noviembre-A; decisión de Viviana, 21 oct 2026.)*
 
 ## Noviembre 2026
-- **(A)** *Guía: cómo construir tu hoja de ruta de sostenibilidad 2027 en 5 pasos.* — Evergreen estacional (planificación de año nuevo). Palabra clave: "hoja de ruta de sostenibilidad". **→ Resp. Viviana.**
+- **(A)** *Camino a la COP31: qué deberían estar mirando las empresas de LATAM.* — Ángulo de actualidad de fin de año (cierre de temporada COP). Reutiliza el Doc ya generado el 16 oct 2026. **→ Resp. Viviana.** *(Movido desde Octubre-B; decisión de Viviana, 21 oct 2026.)*
 - **(B)** *Greenwashing: 3 señales de alerta que tus clientes ya están detectando.* — Ángulo de opinión, anti-greenwashing (tema de buen desempeño previo). **→ Resp. Alejandra.**
 
 ## Diciembre 2026
@@ -62,7 +62,21 @@ David sale de la rotación (Viviana, 28 sep 2026). La rotación queda Alejandra 
 | Dic-A | Alejandra | Miguel |
 | Dic-B | Miguel | Laura |
 
+## Cambios de temas (21 oct 2026)
+
+Decisión de Viviana: el tema de Laura queda esta semana (19–25 oct) y cubre la aclaración sobre el GWP del metano del PDF del GHG Protocol. Los responsables de cada slot no cambian.
+
+| Slot | Antes | Ahora | Razón |
+|------|-------|-------|-------|
+| Oct-B | Camino a la COP31 (Laura) | Metano en combustión: por qué usar un GWP de 27 y cuándo corresponde 29,8 (Laura) | Aclaración técnica del GWP100 del metano, pedida por Viviana |
+| Nov-A | Hoja de ruta de sostenibilidad 2027 (Viviana) | Camino a la COP31 (Viviana) | COP31 pasa a noviembre y reutiliza el Doc ya generado el 16 oct; el cierre de la COP31 (9 al 20 de noviembre) cae en ese mes |
+| Reserva | — | Hoja de ruta de sostenibilidad 2027 en 5 pasos | No desaparece: queda en reserva explícita (ver Notas de uso) |
+
+El Doc de COP31 existente (generado el 16 oct para Octubre-B, resp. Laura) se conserva tal cual y no se sobrescribe; ver el plan de tracker.
+
 ## Notas de uso
+
+- **Reserva explícita (21 oct 2026):** *Guía: cómo construir tu hoja de ruta de sostenibilidad 2027 en 5 pasos.* Evergreen estacional (planificación de año nuevo). Palabra clave: "hoja de ruta de sostenibilidad". Responsable previsto: Viviana. Queda disponible para el primer hueco que se libere (por ejemplo, un reemplazo ad-hoc o diciembre); la fecha la decide Viviana.
 
 - **Flexibilidad:** los temas (B) de actualidad pueden cambiar según noticias/regulación del momento (nuevos estándares ISO/ISSB, resultados de COP, normativa local). Revisar el calendario al inicio de cada mes.
 - **Sheet del equipo:** hay 24 ideas adicionales en el spreadsheet del equipo (Google Sheet). Los temas frescos no usados aquí (PyMEs sin presupuesto, ROI de sostenibilidad, sector salud, logística baja en carbono, CSRD/ISSB/SEC, etc.) quedan como reserva para 2027 o para reemplazos ad-hoc.

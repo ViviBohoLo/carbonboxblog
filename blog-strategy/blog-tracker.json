@@ -98,22 +98,74 @@
     },
     {
       "slot": "Octubre-B",
-      "tema": "Camino a la COP31: qué deberían estar mirando las empresas de LATAM",
+      "tema": "Metano en combustión: por qué usar un GWP de 27 y cuándo corresponde 29,8",
       "responsable": "Laura",
+      "fecha_generacion": "2026-10-21",
+      "fileId": "1EA_R9umxwe5RA27GyCSGwZ8BJ5Gn3id9N_zfdxwTnqo",
+      "viewUrl": "https://docs.google.com/document/d/1EA_R9umxwe5RA27GyCSGwZ8BJ5Gn3id9N_zfdxwTnqo/edit?usp=drivesdk",
+      "slug": "metano-en-combustion-gwp-ar6",
+      "frase_clave": "metano en combustión",
+      "carpeta_aprobados": {
+        "id": "1nYFzGsnnU02qd1hM7vWIHImINVfP8wvZ",
+        "url": "https://drive.google.com/drive/folders/1nYFzGsnnU02qd1hM7vWIHImINVfP8wvZ"
+      },
+      "evento_calendario": "bc51486668c025b53f11dd819196b259ab2e3e86ff83050b99583e612f51d4b1",
+      "correo_aviso": "1a15fe795616ef8d",
+      "remitente_correo": "info@carbonbox.app",
+      "nota": "Cambio aprobado por Viviana el21oct2026: sustituye COP31, conservado íntegro en historial_reasignaciones y preparado para Viviana/Noviembre-A. Plazo de revisión esta semana19–25oct. Doc ES real validado/parseado sin errores ni avisos, portada1, autoraLaura. Un correo de prueba recibido eninfo, identificadoLaura, cuerpo yFrom comprobados. Pendiente de revisión/aprobación humana; no publicado ni traducido por esta prueba."
+    }
+  ],
+  "siguiente_pendiente": "Noviembre-A",
+  "ultima_actualizacion": "2026-10-21",
+  "historial_reasignaciones": [
+    {
+      "fecha": "2026-10-21",
+      "decidido_por": "Viviana",
+      "tipo": "cambio de tema y reasignación de propuesta",
+      "registro_original": {
+        "slot": "Octubre-B",
+        "tema": "Camino a la COP31: qué deberían estar mirando las empresas de LATAM",
+        "responsable": "Laura",
+        "fecha_generacion": "2026-10-16",
+        "fileId": "1xAnKNMrW8RFWFGMhGXAOOSbboxRVVNIRbn6naJSwQfo",
+        "viewUrl": "https://docs.google.com/document/d/1xAnKNMrW8RFWFGMhGXAOOSbboxRVVNIRbn6naJSwQfo/edit",
+        "slug": "camino-a-la-cop31-empresas-latam",
+        "frase_clave": "camino a la COP31",
+        "carpeta_aprobados": {
+          "id": "1OmodZstRuAn1Ij9_iVWPwoHq-07t2vKC",
+          "url": "https://drive.google.com/drive/folders/1OmodZstRuAn1Ij9_iVWPwoHq-07t2vKC"
+        },
+        "evento_calendario": "h04dtsog176qt04kv26s04o108",
+        "correo_aviso": "1a145b0c8fde20f6",
+        "nota": "Generado según calendario editorial (Oct-B, resp. Laura); siguiente_slot.mjs: rotación y calendario coinciden. validar_ficha.mjs sin errores ni avisos antes de subir. Subcarpeta 'Octubre-B — Camino a la COP31' creada en 5_Aprobados_para_publicar. Evento de día completo 'Laura · Nueva Entrada de Blog' SIN invitados (correo @carbonbox.app). Keyword research: Ubersuggest exige login; volumen y dificultad estimados por SERP. Categoría 'Normativa y COP', autor 'Laura María Bautista Santander'. No se consultó el cerebro (el conector pidió permiso); la entrada no menciona clientes ni casos. Detalle menor: el emoji 👉 del copy de LinkedIn llegó al Doc como 'ð'."
+      },
+      "nuevo_slot": "Noviembre-A",
+      "nuevo_responsable": "Viviana",
+      "recepcion_original_verificada": {
+        "id": "1a145b0d66dcf1db",
+        "remitente": "info@kimsa.co"
+      },
+      "motivo": "Octubre-B pasa a GWP/metano para Laura; COP31 se reutiliza en Noviembre-A para Viviana."
+    }
+  ],
+  "reutilizar_doc": [
+    {
+      "slot": "Noviembre-A",
+      "tema": "Camino a la COP31: qué deberían estar mirando las empresas de LATAM",
+      "responsable": "Viviana",
       "fecha_generacion": "2026-10-16",
       "fileId": "1xAnKNMrW8RFWFGMhGXAOOSbboxRVVNIRbn6naJSwQfo",
       "viewUrl": "https://docs.google.com/document/d/1xAnKNMrW8RFWFGMhGXAOOSbboxRVVNIRbn6naJSwQfo/edit",
-      "slug": "camino-a-la-cop31-empresas-latam",
-      "frase_clave": "camino a la COP31",
       "carpeta_aprobados": {
         "id": "1OmodZstRuAn1Ij9_iVWPwoHq-07t2vKC",
         "url": "https://drive.google.com/drive/folders/1OmodZstRuAn1Ij9_iVWPwoHq-07t2vKC"
       },
-      "evento_calendario": "h04dtsog176qt04kv26s04o108",
-      "correo_aviso": "1a145b0c8fde20f6",
-      "nota": "Generado según calendario editorial (Oct-B, resp. Laura); siguiente_slot.mjs: rotación y calendario coinciden. validar_ficha.mjs sin errores ni avisos antes de subir. Subcarpeta 'Octubre-B — Camino a la COP31' creada en 5_Aprobados_para_publicar. Evento de día completo 'Laura · Nueva Entrada de Blog' SIN invitados (correo @carbonbox.app). Keyword research: Ubersuggest exige login; volumen y dificultad estimados por SERP. Categoría 'Normativa y COP', autor 'Laura María Bautista Santander'. No se consultó el cerebro (el conector pidió permiso); la entrada no menciona clientes ni casos. Detalle menor: el emoji 👉 del copy de LinkedIn llegó al Doc como 'ð'."
+      "slug": "camino-a-la-cop31-empresas-latam",
+      "frase_clave": "camino a la COP31",
+      "reutilizado_de": "Octubre-B",
+      "fecha_reasignacion": "2026-10-21",
+      "autora_verificada": "Viviana Bohórquez Lozano",
+      "nota": "Reutilizar el Doc existente: autora y nombre Noviembre-A actualizados el21oct; contenido conservado salvo autora. Registrar el1nov, avanzar rotación una sola vez y terminar esa corrida sin generar Noviembre-B."
     }
-  ],
-  "siguiente_pendiente": "Noviembre-A",
-  "ultima_actualizacion": "2026-10-16"
+  ]
 }
