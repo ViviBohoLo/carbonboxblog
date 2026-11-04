@@ -14,6 +14,10 @@ export const CATEGORIAS = ["Estimación de Huella de Carbono", "Estrategia y ESG
   "Normativa y COP", "Bonos y créditos", "Análisis de ciclo de vida", "Casos de éxito"];
 export const AUTORES = ["Viviana Bohórquez Lozano", "Maria Alejandra Rojas Herrera", "David Romero",
   "Laura María Bautista Santander", "Miguel Ángel Romero Mora", "Kimsa SAS"];
+export const SERVICIOS = ["Estimación de huella de carbono", "Reducciones de emisiones",
+  "Descarbonización y neto cero", "Medición de impacto y ACV"];
+const SERVICIO_CLAVE = { "estimacion de huella de carbono": "estimacion", "reducciones de emisiones": "reducciones",
+  "descarbonizacion y neto cero": "descarbonizacion", "medicion de impacto y acv": "medicion-impacto" };
 
 const sinTildes = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "");
 const clave = (s) => sinTildes(s).toLowerCase().replace(/[*_]/g, "").replace(/\(.*?\)/g, "").replace(/\s+/g, " ").trim();
@@ -24,7 +28,7 @@ const texto = (html) => html.replace(/<(script|style)[\s\S]*?<\/\1>/gi, " ").rep
 
 const CAMPOS = {
   frase: "frase clave objetivo", titulo: "etiqueta de titulo", meta: "metadescripcion", slug: "slug de url",
-  sinopsis: "sinopsis/extracto", categoria: "categoria del blog", etiquetas: "etiquetas", alt: "alt text de imagen de portada", autor: "autor",
+  sinopsis: "sinopsis/extracto", categoria: "categoria del blog", etiquetas: "etiquetas", alt: "alt text de imagen de portada", autor: "autor", servicio: "servicio relacionado",
 };
 
 export function validarPropuesta(html) {
@@ -49,7 +53,7 @@ export function validarPropuesta(html) {
   }
   for (const [id, etiqueta] of Object.entries(CAMPOS)) if (!campos[id]) errores.push(`Falta el campo "${etiqueta}".`);
 
-  const { frase = "", titulo = "", meta = "", slug = "", sinopsis = "", categoria = "", autor = "", etiquetas = "" } = campos;
+  const { frase = "", titulo = "", meta = "", slug = "", sinopsis = "", categoria = "", autor = "", etiquetas = "", servicio = "" } = campos;
   if (titulo && titulo.length > 60) errores.push(`Etiqueta de título: ${titulo.length} caracteres (máx. 60 sin " | CarbonBox").`);
   if (meta && meta.length > 155) errores.push(`Metadescripción: ${meta.length} caracteres (máx. 155).`);
   if (slug) {
@@ -59,6 +63,7 @@ export function validarPropuesta(html) {
   }
   if (sinopsis && (sinopsis.length < 150 || sinopsis.length > 250)) errores.push(`Sinopsis: ${sinopsis.length} caracteres (150-250).`);
   if (categoria && !CATEGORIAS.some((c) => clave(c) === clave(categoria))) errores.push(`Categoría "${categoria}" no es una de las 8 oficiales.`);
+  if (servicio && !SERVICIOS.some((s) => clave(s) === clave(servicio))) errores.push(`Servicio relacionado "${servicio}" no es uno de los 4 oficiales: ${SERVICIOS.join(" · ")}.`);
   if (autor && !AUTORES.includes(autor.trim())) errores.push(`Autor "${autor}" no coincide EXACTO con la lista oficial (saldría firmado "CarbonBox").`);
   if (etiquetas) { const n = etiquetas.split(",").filter((x) => x.trim()).length; if (n < 3 || n > 5) avisos.push(`Etiquetas: ${n} (lo recomendado es 3-5).`); }
 
@@ -74,12 +79,16 @@ export function validarPropuesta(html) {
 
   // Reglas de oro verificables sobre el CUERPO (la ficha puede nombrar la categoría "Bonos y créditos").
   const t = texto(cuerpo);
-  if (/\bmedici[oó]n(es)?\b/i.test(t)) errores.push('El cuerpo dice "medición": la regla de oro es "estimación".');
+  // "Medición de impacto y ACV" es el NOMBRE de un servicio: no viola la regla de oro.
+  const tGolden = t.replace(/medici[oó]n de impacto( y acv)?/gi, " ");
+  if (/\bmedici[oó]n(es)?\b/i.test(tGolden)) errores.push('El cuerpo dice "medición": la regla de oro es "estimación".');
   if (/\bbonos?\b/i.test(t)) errores.push('El cuerpo dice "bono(s)": la regla de oro es "créditos".');
   if (!/https:\/\/www\.carbonbox\.app\/?["'\s>]/.test(cuerpo)) avisos.push("No encontré el CTA a https://www.carbonbox.app/ en el cuerpo.");
   if (/carbonbox\.app\/?#contacto/i.test(cuerpo)) errores.push("El CTA no lleva #contacto.");
   const sueltos = (cuerpo.replace(/<(b|strong)\b[^>]*>\s*CarbonBox\s*<\/\1>/gi, "").replace(/<[^>]+>/g, " ").match(/\bCarbonBox\b/g) || []).length;
   if (sueltos) avisos.push(`"CarbonBox" aparece ${sueltos} vez/veces sin negrilla.`);
+  const svcClave = SERVICIO_CLAVE[clave(servicio)];
+  if (svcClave && !new RegExp("/servicios/" + svcClave, "i").test(cuerpo)) avisos.push(`El cuerpo no enlaza el servicio relacionado (/servicios/${svcClave}).`);
   if (/data:image\//i.test(html)) errores.push("Hay imágenes en base64: se corrompen en Drive.");
 
   return { errores, avisos, campos };

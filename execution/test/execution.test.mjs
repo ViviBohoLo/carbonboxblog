@@ -49,7 +49,8 @@ ${extra}
 <p>Categoría del blog: Análisis de ciclo de vida</p>
 <p>Etiquetas: acv, ciclo de vida, huella de producto</p>
 <p>Alt text de imagen de portada: Equipo revisando un análisis de ciclo de vida</p>
-<p>Autor: Miguel Ángel Romero Mora</p>`;
+<p>Autor: Miguel Ángel Romero Mora</p>
+<p>Servicio relacionado: Medición de impacto y ACV</p>`;
 
 test("una propuesta correcta pasa sin errores", () => {
   const r = validarPropuesta(ficha());
@@ -79,4 +80,15 @@ test("slug con tildes, meta larga y dos H1 son errores", () => {
   assert.match(e, /exactamente un <h1>/);
   assert.match(e, /Slug inválido/);
   assert.match(e, /Metadescripción/);
+});
+
+test("un servicio relacionado fuera de los 4 oficiales es error", () => {
+  const r = validarPropuesta(ficha().replace("Servicio relacionado: Medición de impacto y ACV", "Servicio relacionado: Consultoría general"));
+  assert.match(r.errores.join(" | "), /Servicio relacionado "Consultoría general"/);
+});
+
+test("el nombre del servicio 'Medición de impacto y ACV' no viola la regla de oro en el cuerpo", () => {
+  const html = ficha('<p>Conoce la <a href="https://www.carbonbox.app/servicios/medicion-impacto">Medición de impacto y ACV</a>.</p>');
+  const e = validarPropuesta(html).errores.join(" | ");
+  assert.ok(!/regla de oro es "estimación"/.test(e), "no debía marcar la regla de oro: " + e);
 });
