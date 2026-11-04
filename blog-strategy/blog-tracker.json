@@ -80,42 +80,91 @@
       "slot": "Octubre-A",
       "tema": "Análisis de Ciclo de Vida (ACV): guía práctica 2026",
       "responsable": "Miguel",
-      "fecha_generacion": "2026-10-01",
-      "fileId": "1fynPceQVWl-6DQYAXMSLyq6zDv8zaphZb8DxAKE0DbE",
-      "viewUrl": "https://docs.google.com/document/d/1fynPceQVWl-6DQYAXMSLyq6zDv8zaphZb8DxAKE0DbE/edit",
+      "fileId": "1DLBKCZCNu9E_H38I6MzOvOcBCfRO_wr8NiE_heFNR38",
+      "viewUrl": "https://docs.google.com/document/d/1DLBKCZCNu9E_H38I6MzOvOcBCfRO_wr8NiE_heFNR38/edit",
       "slug": "analisis-de-ciclo-de-vida-guia-2026",
       "frase_clave": "análisis de ciclo de vida",
-      "evento_calendario": "hq3kitffbv856pugv18bh62vm8",
-      "correo_aviso": "1a0f7ec77659739b",
       "carpeta_aprobados": {
         "id": "19j9q4gkNKJzYImwJPmabk0X14aYfF4uX",
         "url": "https://drive.google.com/drive/folders/19j9q4gkNKJzYImwJPmabk0X14aYfF4uX"
       },
-      "nota": "Generado por la tarea local del portátil (blog-carbonbox-borrador-quincenal) siguiendo blog-skill.md. siguiente_slot.mjs: rotación y calendario coinciden (Miguel). Antes de subir se verificó que no hubiera propuesta de Octubre-A en 3_Borradores_automaticos ni evento hoy (anti-duplicado con Pulpo/VPS). validar_ficha.mjs sin errores. Ubersuggest exige login: volumen/dificultad estimados por SERP. Evento sin invitados (correo @carbonbox.app). || Registro retroactivo creado por la tarea de traducción (14 oct 2026): la propuesta ES ya estaba aprobada en su subcarpeta 'Octubre-A — Análisis de ciclo de vida 2026' (creada el 1 oct) pero el slot no figuraba en el tracker, y rotacion_responsables.json tampoco se había avanzado (sigue en proximo_index 1 = Miguel). Responsable según calendario editorial: Miguel. Ficha ES validada: formato LÍNEAS, slug, sinopsis de ~200 car., categoría 'Análisis de ciclo de vida', autor 'Miguel Ángel Romero Mora'. Evento 'Miguel · Blog listo para publicar' creado SIN invitados (eventId 5omr8iobs7n6l0nl2jd4jb9kss) y correo de aviso enviado a info@carbonbox.app (messageId 1a13b8e5122f1146).",
-      "fileId_alt_theirs": {
-        "fileId": "1DLBKCZCNu9E_H38I6MzOvOcBCfRO_wr8NiE_heFNR38",
-        "viewUrl": "https://docs.google.com/document/d/1DLBKCZCNu9E_H38I6MzOvOcBCfRO_wr8NiE_heFNR38/edit"
-      },
+      "nota": "Registro retroactivo creado por la tarea de traducción (14 oct 2026): la propuesta ES ya estaba aprobada en su subcarpeta 'Octubre-A — Análisis de ciclo de vida 2026' (creada el 1 oct) pero el slot no figuraba en el tracker, y rotacion_responsables.json tampoco se había avanzado (sigue en proximo_index 1 = Miguel). Responsable según calendario editorial: Miguel. Ficha ES validada: formato LÍNEAS, slug, sinopsis de ~200 car., categoría 'Análisis de ciclo de vida', autor 'Miguel Ángel Romero Mora'. Evento 'Miguel · Blog listo para publicar' creado SIN invitados (eventId 5omr8iobs7n6l0nl2jd4jb9kss) y correo de aviso enviado a info@carbonbox.app (messageId 1a13b8e5122f1146).",
       "traduccion_en": {
-        "fileId": "1jFpta_1vXS1SZQAeCzhZHiKo-N56EzqR-CnJwP1QeEo",
-        "viewUrl": "https://docs.google.com/document/d/1jFpta_1vXS1SZQAeCzhZHiKo-N56EzqR-CnJwP1QeEo/edit",
-        "fecha": "2026-10-14",
-        "nota": "Subido dentro de la subcarpeta de la entrada. Keyword research propio en inglés: frase clave 'life cycle assessment'. Slug y categoría compartidos con el ES. validar_ficha.mjs no se pudo correr en esta corrida (el entorno pidió aprobación para node); sus comprobaciones se hicieron a mano: 1 H1, ficha en líneas, título 51 car., meta 144, sinopsis 185, sin tablas en la ficha ni base64."
+        "fileId": "1zUK-JzflwzpCzHLZEqLXgVJ5Uflad2wFXizKyFq4Xh8",
+        "viewUrl": "https://docs.google.com/document/d/1zUK-JzflwzpCzHLZEqLXgVJ5Uflad2wFXizKyFq4Xh8/edit",
+        "fecha": "2026-10-16T15:12:38Z",
+        "nota": "v5 — re-traducción: el doc ES se editó el 16 oct a las 15:07 UTC, después de la EN v4 (1FGcqUpHLCOAyNYSSS5p1BDKdlFYfW4I-R6GZHgXDIcE, 14:03 UTC), que se renombró con el prefijo 'OBSOLETO (v4, no importar)' y sigue en la subcarpeta. El cuerpo del ES no cambió en contenido; la EN v5 es la v4 con la nota de versión al día. El Título 1 del ES ya abarca solo el título. Los 'asteriscos literales' de v3 y v4 eran un FALSO POSITIVO: read_file_content muestra como \\*\\* las negrillas dentro de tablas y listas (pasa igual con el propio doc EN, que tiene <b> limpio); la exportación text/plain del ES no tiene asteriscos. Se corrigió el aviso en el evento (rijsldo2dpvkcmphvkkfvj80l8, sin invitados) y en el correo a info@carbonbox.app (messageId 1a1454677e402ac6). validar_ficha.mjs no corrió (node pidió aprobación); comprobado a mano: 1 H1, ficha en líneas, slug y categoría iguales al ES, etiquetas de la ficha en español, sin base64, 'measurement' ni #contacto, CarbonBox en negrilla. || v4 — re-traducción: el doc ES se editó el 16 oct a las 13:58 UTC, 4 minutos después de la EN v3 (1gPK5j3aWFJDxzZuAgU0WNVu5fxVYGHO9O88sXzYsTSs, 13:53 UTC), que se renombró con el prefijo 'OBSOLETO (v3, no importar)' y sigue en la subcarpeta. Según la exportación en texto, el cuerpo del ES no cambió en contenido (solo una coma de más tras 'Análisis de Ciclo de Vida', que no afecta a la EN); la EN v4 es la v3 con la nota de versión al día. PROBLEMAS EN EL ES que siguen sin arreglar: (1) el Título 1 sigue abarcando el crédito de la foto; (2) hay asteriscos literales (**) en la lista de pasos del primer ACV y en el encabezado de la tabla comparativa. Se avisó de los dos en el evento (1s5vkqu93l553unvrf40bs9vjc, sin invitados) y en el correo a info@carbonbox.app (messageId 1a145077b8b1c480). validar_ficha.mjs no corrió (node pidió aprobación otra vez); comprobado a mano: 1 H1, ficha en líneas, slug y categoría iguales al ES, sin base64, 'measurement' ni #contacto, CarbonBox en negrilla. || v3 — re-traducción: el doc ES se editó el 16 oct a las 13:44 UTC, después de la EN v2 (1GdlER7fHdIEbhZzGJkik0Qqs2yG9ZX3TX42tgGrt4mU, 14 oct 20:35 UTC), que se renombró con el prefijo 'OBSOLETO (v2, no importar)' y sigue en la subcarpeta. El cuerpo del ES no cambió en contenido respecto a la v2 (solo puntuación y negrillas); lo que cambió es el título: según la exportación en texto, el estilo Título 1 ahora parece abarcar también el crédito de la foto. Se avisó en el evento (93uhm3ca1c191grgv352rcnlao, sin invitados) y en el correo a info@carbonbox.app (messageId 1a144fe66c8d6d65) que hay que dejar en Título 1 solo el título antes de importar. validar_ficha.mjs no corrió (node pidió aprobación otra vez); comprobado a mano: 1 H1, ficha en líneas, slug y categoría iguales al ES, sin base64, 'measurement' ni #contacto. || v2 — re-traducción: el doc ES se editó el 14 oct a las 20:27 UTC, después de la EN v1 (1jFpta_1vXS1SZQAeCzhZHiKo-N56EzqR-CnJwP1QeEo, 17:55 UTC). La v1 NO se borró: se renombró con el prefijo 'OBSOLETO (v1, no importar)' y sigue en la subcarpeta. Cambios del ES que se llevaron a la EN: el primer H2 ('¿Qué es el ACV y qué información aporta…') y las viñetas de 2026 sin negrilla. PROBLEMA EN EL ES: el título perdió el estilo Título 1 (el export HTML tiene 0 <h1>; el título quedó en un <p> pegado a la portada). La ficha ES está bien. Se avisó en el evento (cq0ddjnqufliabtakri7dimo8o, sin invitados) y en el correo a info@carbonbox.app (messageId 1a13c20fc741f8d8) que hay que arreglarlo antes de importar. validar_ficha.mjs tampoco corrió esta vez (node pidió aprobación); se comprobó a mano: 1 H1, ficha en líneas, título 51 car., meta 144, sinopsis 185, slug y categoría iguales al ES, sin base64 ni 'measurement'. || v1: Subido dentro de la subcarpeta de la entrada. Keyword research propio en inglés: frase clave 'life cycle assessment'. Slug y categoría compartidos con el ES. validar_ficha.mjs no se pudo correr en esta corrida (el entorno pidió aprobación para node); sus comprobaciones se hicieron a mano: 1 H1, ficha en líneas, título 51 car., meta 144, sinopsis 185, sin tablas en la ficha ni base64."
       }
     },
     {
       "slot": "Octubre-B",
-      "tema": "Camino a la COP31: qué deberían estar mirando las empresas de LATAM",
+      "tema": "Metano en combustión: por qué usar un GWP de 27 y cuándo corresponde 29,8",
       "responsable": "Laura",
-      "fecha_generacion": "2026-10-15",
-      "fileId": "1NB5Vsy0e04U9k6jhBzRIikkQd8zyIi28PAmCAqQiffw",
-      "viewUrl": "https://docs.google.com/document/d/1NB5Vsy0e04U9k6jhBzRIikkQd8zyIi28PAmCAqQiffw/edit",
-      "slug": "cop31-empresas-latam-que-mirar",
-      "frase_clave": "COP31 y empresas de LATAM",
-      "evento_calendario": "bbrcb62k5c8ghg8q0l64f9q4go",
-      "nota": "Generado por la tarea programada de Cowork (ejecución según el prompt almacenado: destino Drive 148OGo1f..., CTA con #contacto, sin correo ni subcarpeta de aprobación; no se corrió validar_ficha.mjs). Pendiente: crear subcarpeta de aprobación en 5_Aprobados_para_publicar si se quiere el disparador de traducción. Cosméticos en el Doc: asteriscos literales en la tabla y '-----' antes de los H1 por el <hr>."
+      "fecha_generacion": "2026-10-21",
+      "fileId": "1EA_R9umxwe5RA27GyCSGwZ8BJ5Gn3id9N_zfdxwTnqo",
+      "viewUrl": "https://docs.google.com/document/d/1EA_R9umxwe5RA27GyCSGwZ8BJ5Gn3id9N_zfdxwTnqo/edit?usp=drivesdk",
+      "slug": "metano-en-combustion-gwp-ar6",
+      "frase_clave": "metano en combustión",
+      "carpeta_aprobados": {
+        "id": "1nYFzGsnnU02qd1hM7vWIHImINVfP8wvZ",
+        "url": "https://drive.google.com/drive/folders/1nYFzGsnnU02qd1hM7vWIHImINVfP8wvZ"
+      },
+      "evento_calendario": "bc51486668c025b53f11dd819196b259ab2e3e86ff83050b99583e612f51d4b1",
+      "correo_aviso": "1a15fe795616ef8d",
+      "remitente_correo": "info@carbonbox.app",
+      "nota": "Cambio aprobado por Viviana el21oct2026: sustituye COP31, conservado íntegro en historial_reasignaciones y preparado para Viviana/Noviembre-A. Plazo de revisión esta semana19–25oct. Doc ES real validado/parseado sin errores ni avisos, portada1, autoraLaura. Un correo de prueba recibido eninfo, identificadoLaura, cuerpo yFrom comprobados. Pendiente de revisión/aprobación humana; no publicado ni traducido por esta prueba."
+    },
+    {
+      "slot": "Noviembre-A",
+      "tema": "Camino a la COP31: qué deberían estar mirando las empresas de LATAM",
+      "responsable": "Viviana",
+      "fecha_generacion": "2026-11-01",
+      "fileId": "1xAnKNMrW8RFWFGMhGXAOOSbboxRVVNIRbn6naJSwQfo",
+      "viewUrl": "https://docs.google.com/document/d/1xAnKNMrW8RFWFGMhGXAOOSbboxRVVNIRbn6naJSwQfo/edit",
+      "slug": "camino-a-la-cop31-empresas-latam",
+      "frase_clave": "camino a la COP31",
+      "carpeta_aprobados": {
+        "id": "1OmodZstRuAn1Ij9_iVWPwoHq-07t2vKC",
+        "url": "https://drive.google.com/drive/folders/1OmodZstRuAn1Ij9_iVWPwoHq-07t2vKC"
+      },
+      "reutilizado_de": "Octubre-B",
+      "evento_calendario": "69m9a9hdflv0if7bt3rk8peikk",
+      "correo_aviso": "1a1976a8df3438b2",
+      "nota": "Reutilización (siguiente_slot.mjs: código 0, ♻️ REUTILIZAR; rotación y calendario = Viviana). Sin Doc, carpeta ni keyword research nuevos. Doc verificado el 1-nov con read_file_content: existe, título 'Propuesta blog Noviembre-A — …', un solo H1, ficha en líneas 'Etiqueta: valor', autor 'Viviana Bohórquez Lozano', slug y frase clave iguales a los del tracker. validar_ficha.mjs no corrió sobre la exportación (el entorno pidió aprobación para escribir el HTML en .tmp/ y para node -e); revisión a mano. Los \\*\\* de la tabla son el falso positivo conocido de read_file_content. Detalle menor heredado: el emoji del copy de LinkedIn sigue como 'ð'. Ojo: la entrada dice 'Del 9 al 20 de noviembre', así que conviene revisarla y publicarla antes de que termine la cumbre. Subcarpeta 'Noviembre-A — Camino a la COP31' en 5_Aprobados_para_publicar. Evento de día completo 'Viviana · Nueva Entrada de Blog' SIN invitados (@carbonbox.app). Correo a info@carbonbox.app."
     }
   ],
-  "siguiente_pendiente": "Noviembre-A",
-  "ultima_actualizacion": "2026-10-15"
+  "siguiente_pendiente": "Noviembre-B",
+  "ultima_actualizacion": "2026-11-01",
+  "historial_reasignaciones": [
+    {
+      "fecha": "2026-10-21",
+      "decidido_por": "Viviana",
+      "tipo": "cambio de tema y reasignación de propuesta",
+      "registro_original": {
+        "slot": "Octubre-B",
+        "tema": "Camino a la COP31: qué deberían estar mirando las empresas de LATAM",
+        "responsable": "Laura",
+        "fecha_generacion": "2026-10-16",
+        "fileId": "1xAnKNMrW8RFWFGMhGXAOOSbboxRVVNIRbn6naJSwQfo",
+        "viewUrl": "https://docs.google.com/document/d/1xAnKNMrW8RFWFGMhGXAOOSbboxRVVNIRbn6naJSwQfo/edit",
+        "slug": "camino-a-la-cop31-empresas-latam",
+        "frase_clave": "camino a la COP31",
+        "carpeta_aprobados": {
+          "id": "1OmodZstRuAn1Ij9_iVWPwoHq-07t2vKC",
+          "url": "https://drive.google.com/drive/folders/1OmodZstRuAn1Ij9_iVWPwoHq-07t2vKC"
+        },
+        "evento_calendario": "h04dtsog176qt04kv26s04o108",
+        "correo_aviso": "1a145b0c8fde20f6",
+        "nota": "Generado según calendario editorial (Oct-B, resp. Laura); siguiente_slot.mjs: rotación y calendario coinciden. validar_ficha.mjs sin errores ni avisos antes de subir. Subcarpeta 'Octubre-B — Camino a la COP31' creada en 5_Aprobados_para_publicar. Evento de día completo 'Laura · Nueva Entrada de Blog' SIN invitados (correo @carbonbox.app). Keyword research: Ubersuggest exige login; volumen y dificultad estimados por SERP. Categoría 'Normativa y COP', autor 'Laura María Bautista Santander'. No se consultó el cerebro (el conector pidió permiso); la entrada no menciona clientes ni casos. Detalle menor: el emoji 👉 del copy de LinkedIn llegó al Doc como 'ð'."
+      },
+      "nuevo_slot": "Noviembre-A",
+      "nuevo_responsable": "Viviana",
+      "recepcion_original_verificada": {
+        "id": "1a145b0d66dcf1db",
+        "remitente": "info@kimsa.co"
+      },
+      "motivo": "Octubre-B pasa a GWP/metano para Laura; COP31 se reutiliza en Noviembre-A para Viviana."
+    }
+  ],
+  "reutilizar_doc": []
 }

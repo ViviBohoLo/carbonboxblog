@@ -10,6 +10,12 @@
 // Uso:  node execution/siguiente_slot.mjs [--json]
 // Sale con código 2 si la rotación y el calendario NO coinciden: en ese caso el
 // flujo se DETIENE y se reporta a Viviana (regla 5c del skill).
+//
+// Slot con Doc existente: el tracker puede traer "reutilizar_doc", una lista de
+// {slot, fileId, viewUrl, carpeta_aprobados, slug, frase_clave, reutilizado_de, nota}.
+// Si el slot pendiente figura ahí, el resultado incluye "reutilizar" con ESA entrada
+// completa (solo la de ese slot, nunca la de otro) y el flujo NO genera una propuesta
+// nueva: registra el slot con ese Doc (ver blog-skill.md, paso 2.0b).
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -50,6 +56,7 @@ export function siguienteSlot({ calendario, tracker, rotacion }) {
     coinciden: !!pendiente.responsable && pendiente.responsable === responsableRotacion,
     pendientes_en_calendario: atrasados,
     tracker_dice: tracker.siguiente_pendiente ?? null,
+    reutilizar: (tracker.reutilizar_doc || []).find((x) => x.slot === pendiente.slot) ?? null,
   };
 }
 
@@ -67,7 +74,9 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     console.log(`Slot: ${r.slot}  |  Tema: ${r.tema}`);
     console.log(`Responsable → calendario: ${r.responsable_calendario ?? "(sin → Resp.)"} · rotación: ${r.responsable_rotacion}`);
     if (r.tracker_dice && r.tracker_dice !== r.slot) console.log(`⚠️  El tracker dice siguiente_pendiente="${r.tracker_dice}"; manda el cruce con el calendario.`);
-    console.log(r.coinciden ? "✅ Coinciden: se puede generar." : "⛔ NO coinciden: DETENERSE y reportar a Viviana (regla 5c).");
+    if (r.reutilizar && r.coinciden) {
+      console.log(`♻️  REUTILIZAR el Doc ${r.reutilizar.fileId}: NO generar una propuesta nueva; registrar ${r.slot} con ese Doc (misma carpeta) y avanzar la rotación una sola vez.`);
+    } else console.log(r.coinciden ? "✅ Coinciden: se puede generar." : "⛔ NO coinciden: DETENERSE y reportar a Viviana (regla 5c).");
   }
   if (!r.fin && !r.coinciden) process.exit(2);
 }
