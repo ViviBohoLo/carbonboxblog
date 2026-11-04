@@ -91,9 +91,31 @@
         "id": "19j9q4gkNKJzYImwJPmabk0X14aYfF4uX",
         "url": "https://drive.google.com/drive/folders/19j9q4gkNKJzYImwJPmabk0X14aYfF4uX"
       },
-      "nota": "Generado por la tarea local del portátil (blog-carbonbox-borrador-quincenal) siguiendo blog-skill.md. siguiente_slot.mjs: rotación y calendario coinciden (Miguel). Antes de subir se verificó que no hubiera propuesta de Octubre-A en 3_Borradores_automaticos ni evento hoy (anti-duplicado con Pulpo/VPS). validar_ficha.mjs sin errores. Ubersuggest exige login: volumen/dificultad estimados por SERP. Evento sin invitados (correo @carbonbox.app)."
+      "nota": "Generado por la tarea local del portátil (blog-carbonbox-borrador-quincenal) siguiendo blog-skill.md. siguiente_slot.mjs: rotación y calendario coinciden (Miguel). Antes de subir se verificó que no hubiera propuesta de Octubre-A en 3_Borradores_automaticos ni evento hoy (anti-duplicado con Pulpo/VPS). validar_ficha.mjs sin errores. Ubersuggest exige login: volumen/dificultad estimados por SERP. Evento sin invitados (correo @carbonbox.app). || Registro retroactivo creado por la tarea de traducción (14 oct 2026): la propuesta ES ya estaba aprobada en su subcarpeta 'Octubre-A — Análisis de ciclo de vida 2026' (creada el 1 oct) pero el slot no figuraba en el tracker, y rotacion_responsables.json tampoco se había avanzado (sigue en proximo_index 1 = Miguel). Responsable según calendario editorial: Miguel. Ficha ES validada: formato LÍNEAS, slug, sinopsis de ~200 car., categoría 'Análisis de ciclo de vida', autor 'Miguel Ángel Romero Mora'. Evento 'Miguel · Blog listo para publicar' creado SIN invitados (eventId 5omr8iobs7n6l0nl2jd4jb9kss) y correo de aviso enviado a info@carbonbox.app (messageId 1a13b8e5122f1146).",
+      "fileId_alt_theirs": {
+        "fileId": "1DLBKCZCNu9E_H38I6MzOvOcBCfRO_wr8NiE_heFNR38",
+        "viewUrl": "https://docs.google.com/document/d/1DLBKCZCNu9E_H38I6MzOvOcBCfRO_wr8NiE_heFNR38/edit"
+      },
+      "traduccion_en": {
+        "fileId": "1jFpta_1vXS1SZQAeCzhZHiKo-N56EzqR-CnJwP1QeEo",
+        "viewUrl": "https://docs.google.com/document/d/1jFpta_1vXS1SZQAeCzhZHiKo-N56EzqR-CnJwP1QeEo/edit",
+        "fecha": "2026-10-14",
+        "nota": "Subido dentro de la subcarpeta de la entrada. Keyword research propio en inglés: frase clave 'life cycle assessment'. Slug y categoría compartidos con el ES. validar_ficha.mjs no se pudo correr en esta corrida (el entorno pidió aprobación para node); sus comprobaciones se hicieron a mano: 1 H1, ficha en líneas, título 51 car., meta 144, sinopsis 185, sin tablas en la ficha ni base64."
+      }
+    },
+    {
+      "slot": "Octubre-B",
+      "tema": "Camino a la COP31: qué deberían estar mirando las empresas de LATAM",
+      "responsable": "Laura",
+      "fecha_generacion": "2026-10-15",
+      "fileId": "1NB5Vsy0e04U9k6jhBzRIikkQd8zyIi28PAmCAqQiffw",
+      "viewUrl": "https://docs.google.com/document/d/1NB5Vsy0e04U9k6jhBzRIikkQd8zyIi28PAmCAqQiffw/edit",
+      "slug": "cop31-empresas-latam-que-mirar",
+      "frase_clave": "COP31 y empresas de LATAM",
+      "evento_calendario": "bbrcb62k5c8ghg8q0l64f9q4go",
+      "nota": "Generado por la tarea programada de Cowork (ejecución según el prompt almacenado: destino Drive 148OGo1f..., CTA con #contacto, sin correo ni subcarpeta de aprobación; no se corrió validar_ficha.mjs). Pendiente: crear subcarpeta de aprobación en 5_Aprobados_para_publicar si se quiere el disparador de traducción. Cosméticos en el Doc: asteriscos literales en la tabla y '-----' antes de los H1 por el <hr>."
     }
   ],
-  "siguiente_pendiente": "Octubre-B",
-  "ultima_actualizacion": "2026-10-01"
+  "siguiente_pendiente": "Noviembre-A",
+  "ultima_actualizacion": "2026-10-15"
 }
