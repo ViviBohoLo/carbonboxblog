@@ -77,6 +77,10 @@ El Doc de COP31 existente (generado el 16 oct para Octubre-B, resp. Laura) se co
 ## Notas de uso
 
 - **Reserva explícita (21 oct 2026):** *Guía: cómo construir tu hoja de ruta de sostenibilidad 2027 en 5 pasos.* Evergreen estacional (planificación de año nuevo). Palabra clave: "hoja de ruta de sostenibilidad". Responsable previsto: Viviana. Queda disponible para el primer hueco que se libere (por ejemplo, un reemplazo ad-hoc o diciembre); la fecha la decide Viviana.
+- **Reserva explícita (3 nov 2026): dos temas para cubrir huecos de la web.** Salen de la propuesta de enlaces entre Servicios y blog: hoy ningún artículo cubre estos temas, y las páginas de servicio los necesitan para enlazarlos. Igual que la anterior, quedan disponibles para un hueco o un reemplazo ad-hoc; la fecha y el responsable los decide Viviana.
+  - *Guía: cómo priorizar medidas de reducción de emisiones por costo-beneficio (inversión, ahorro y toneladas evitadas).* Tipo A, evergreen de decisión. Palabra clave candidata: "medidas de reducción de emisiones". Al publicarlo, se enlaza desde la página de Reducciones (`/servicios/reducciones`).
+  - *Guía: cómo preparar, presentar y validar metas ante SBTi.* Tipo A, evergreen de decisión. Palabra clave candidata: "metas basadas en ciencia SBTi". Al publicarlo, se enlaza desde la página de Descarbonización (`/servicios/descarbonizacion`).
+  - **Al publicar cualquiera de los dos:** avisar al agente Web para sumarlo a `POST_SERVICIO` en `src/data/servicios-blog.js`, para que muestre la tarjeta "Servicio relacionado", y enlazarlo desde la tarjeta "Para quién" que corresponda en la subpágina del servicio.
 
 - **Flexibilidad:** los temas (B) de actualidad pueden cambiar según noticias/regulación del momento (nuevos estándares ISO/ISSB, resultados de COP, normativa local). Revisar el calendario al inicio de cada mes.
 - **Sheet del equipo:** hay 24 ideas adicionales en el spreadsheet del equipo (Google Sheet). Los temas frescos no usados aquí (PyMEs sin presupuesto, ROI de sostenibilidad, sector salud, logística baja en carbono, CSRD/ISSB/SEC, etc.) quedan como reserva para 2027 o para reemplazos ad-hoc.
