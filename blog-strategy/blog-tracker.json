@@ -154,26 +154,10 @@
       "evento_calendario": "7r0j9cv6rtilgh29lt1hd43mog",
       "correo_aviso": "1a1df873d762b360",
       "nota": "Generado según calendario editorial (Nov-B, resp. Alejandra); siguiente_slot.mjs: código 0, rotación y calendario coinciden. validar_ficha.mjs sin errores ni avisos antes de subir. H1: 'Greenwashing en empresas: 3 señales de alerta que tus clientes ya están detectando' (se agregó 'en empresas' para incluir la frase clave; el Doc trae una nota por si el equipo prefiere el título original). Categoría 'Estrategia y ESG', autor 'Maria Alejandra Rojas Herrera', servicio relacionado 'Descarbonización y neto cero' (enlazado a /servicios/descarbonizacion). Keyword research: Ubersuggest exige login; volumen y dificultad estimados por SERP. Portada: Pexels 7108697 (Tiger Lily). Subcarpeta 'Noviembre-B — Greenwashing en empresas' en 5_Aprobados_para_publicar. Evento de día completo 'Alejandra · Nueva Entrada de Blog' SIN invitados (@carbonbox.app). Correo a info@carbonbox.app enviado desde info@kimsa.co. No se consultó el cerebro: la entrada no menciona clientes ni casos (la cifra de ejemplo de la señal 1 es ilustrativa)."
-    },
-    {
-      "slot": "AD-HOC-2026-11-23",
-      "tema": "Resultados de la COP31: qué dejó Antalya y qué significa para las empresas de LATAM",
-      "responsable": "Viviana",
-      "fecha_generacion": "2026-11-23",
-      "fileId": "1ufKT7bBhoFZc3StLwjKVJVfC5e0EIPfKrdxC0hgEjX4",
-      "viewUrl": "https://docs.google.com/document/d/1ufKT7bBhoFZc3StLwjKVJVfC5e0EIPfKrdxC0hgEjX4/edit",
-      "slug": "resultados-de-la-cop31-empresas",
-      "frase_clave": "resultados de la COP31",
-      "carpeta_aprobados": {
-        "id": "1R9-3sxcAizho8A4NVKPNWHHcsn0A5-C2",
-        "url": "https://drive.google.com/drive/folders/1R9-3sxcAizho8A4NVKPNWHHcsn0A5-C2"
-      },
-      "ad_hoc": true,
-      "nota": "AD-HOC pedido por Viviana en chat (sesión del agente web) tras el cierre de la COP31 el 22-nov sin decisión general. NO avanza la rotación ni reemplaza Diciembre-A. validar_ficha.mjs sin errores (cuerpo ~1.785 palabras). Sin evento de calendario ni correo: Viviana es la responsable y recibió el enlace en el chat. Ubersuggest sin acceso: keyword estimada por SERP. Detalle conocido: el emoji del copy de LinkedIn quedó como ð en el Doc."
     }
   ],
   "siguiente_pendiente": "Diciembre-A",
-  "ultima_actualizacion": "2026-11-23",
+  "ultima_actualizacion": "2026-11-15",
   "historial_reasignaciones": [
     {
       "fecha": "2026-10-21",
